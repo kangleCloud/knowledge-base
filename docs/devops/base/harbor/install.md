@@ -47,7 +47,7 @@ hostname: 127.0.0.1
 port: 88
 
 ## admin管理员登录密码
-harbor_admin_password: 123456
+harbor_admin_password: <PASSWORD>
 
 ## 数据卷目录
 data_volume: /data/harbor
@@ -194,14 +194,14 @@ docker-compose stop
 docker-compose start
 
 # 登录
-docker login -uadmin -pHarbor12345 192.168.3.12:6007
+docker login -u admin -p '<PASSWORD>' 192.168.3.12:6007
 ```
 
 ### 四、管理harbor
 
 ```bash
 # linux登录docker
-docker login -uadmin -pHarbor12345 192.168.3.12:6007
+docker login -u admin -p '<PASSWORD>' 192.168.3.12:6007
 
 # 拉取alpine镜像
 docker pull alpine

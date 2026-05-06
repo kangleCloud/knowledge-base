@@ -65,7 +65,7 @@ yum -y install gcc gcc-c++ glibc \
 ### 0x02.升级OpenSSL
 
 所有运行 OpenSSL 1.1.1.*
-版本的系统都需升级至该系列的最新版本，以获取最新的安全补丁和功能更新。具体升级方法请参考<a href="/devops/baseops/server-os/upgrade-openssl.html" target="_blank">
+版本的系统都需升级至该系列的最新版本，以获取最新的安全补丁和功能更新。具体升级方法请参考<a href="/docs/devops/base/server-os/upgrade-openssl.html" target="_blank">
 升级 OpenSSL</a>。
 
 ## 3.编译安装

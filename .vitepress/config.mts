@@ -7,8 +7,9 @@ import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ignoreDeadLinks: true,
-  title: "一只小小康",
-  description: "Learn Documents",
+  srcExclude: ["archive/**"],
+  title: "技术知识库",
+  description: "Backend / Database / Middleware / DevOps / Troubleshooting",
   lang: 'zh-CN',
   lastUpdated: true,
 
@@ -69,7 +70,7 @@ export default defineConfig({
 
     outline: 'deep',
     outlineTitle: '文章目录',
-    logo: "/logo.png",
+    logo: "/static/logo.png",
 
     editLink: {
       pattern: '',

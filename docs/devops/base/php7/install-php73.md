@@ -423,7 +423,7 @@ chkconfig --list php-fpm73 #查看配置
 
 :::tip 使用rc.local方式实现开机自启
 
-> 前提：启用 <a href="/devops/baseops/server-os/initialization.html#九、启用-rc-local-服务" target="_blank">rc.local</a> 服务
+> 前提：启用 <a href="/docs/devops/base/server-os/initialization.html#九、启用-rc-local-服务" target="_blank">rc.local</a> 服务
 
 修改 rc.local 文件
 ```bash

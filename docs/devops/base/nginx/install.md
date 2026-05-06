@@ -125,7 +125,7 @@ mkdir -pv /data/logs/nginx1.28
 vim /usr/local/nginx1.28/conf/nginx.conf
 ```
 
-配置文件内容请参照<a href="/devops/baseops/nginx/configuration.html" target="_blank">Nginx基础配置</a>
+配置文件内容请参照<a href="/docs/devops/base/nginx/configuration.html" target="_blank">Nginx基础配置</a>
 
 ## 3.使用Systemd管理进程
 

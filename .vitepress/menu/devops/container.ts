@@ -1,62 +1,72 @@
-// write your menu in here
-const ContainerMenu = [
-    {
-        text: '容器',
-        collapsed: false,
-        items: [
-            {
-                text: 'docker',
-                collapsed: false,
-                items: [
-                    {
-                        text: 'docker通过二进制文件安装',
-                        link: '/docs/devops/container/docker/install-by-binaries.md',
-                    },
-                    {
-                        text: 'docker通过yum安装',
-                        link: '/docs/devops/container/docker/install-by-yum.md',
-                    },
-                    {
-                        text: 'docker-compose安装',
-                        link: '/docs/devops/container/docker/install-docker-compose.md',
-                    },
-                    {
-                        text: 'docker常用命令',
-                        link: '/docs/devops/container/docker/docker-commands.md',
-                    }
-                ]
-            },
-            {
-                text: 'kubernetes',
-                collapsed: false,
-                items: [
-                    {
-                        text: 'kubernetes集群搭建',
-                        link: '/docs/devops/container/kubernetes/kubernetes-install/Kubernetes-base-install.md',
-                    },
-                    {
-                        text: 'kubernetes对接外部存储',
-                        link: '/docs/devops/container/kubernetes/kubernetes-install/kubernetes-nfs.md',
-                    },
-                    {
-                        text: 'kubernetes常用命令',
-                        link: '/docs/devops/container/kubernetes/kubernetes-install/kubectl.md',
-                    }
-                ]
-            },
-            {
-                text: 'helm',
-                collapsed: false,
-                items: [
-                    {
-                        text: 'helm安装',
-                        link: '/docs/devops/container/helm/install-helm3-by-binaries.md',
-                    }
-                ]
-            },
+const containerMenu = [
+  {
+    text: "Overview",
+    collapsed: false,
+    items: [
+      {
+        text: "DevOps 知识库概览",
+        link: "/docs/devops/",
+      },
+    ],
+  },
+  {
+    text: "Docker",
+    collapsed: false,
+    items: [
+      {
+        text: "二进制安装 Docker",
+        link: "/docs/devops/container/docker/install-by-binaries.md",
+      },
+      {
+        text: "YUM 安装 Docker",
+        link: "/docs/devops/container/docker/install-by-yum.md",
+      },
+      {
+        text: "安装 Docker Compose",
+        link: "/docs/devops/container/docker/install-docker-compose.md",
+      },
+      {
+        text: "Docker 常用命令",
+        link: "/docs/devops/container/docker/docker-commands.md",
+      },
+    ],
+  },
+  {
+    text: "Kubernetes",
+    collapsed: true,
+    items: [
+      {
+        text: "Kubernetes 基础安装",
+        link: "/docs/devops/container/kubernetes/kubernetes-install/kubernetes-base-install.md",
+      },
+      {
+        text: "kubectl 使用",
+        link: "/docs/devops/container/kubernetes/kubernetes-install/kubectl.md",
+      },
+      {
+        text: "Kubernetes 挂载 NFS",
+        link: "/docs/devops/container/kubernetes/kubernetes-install/kubernetes-nfs.md",
+      },
+      {
+        text: "Helm 3 二进制安装",
+        link: "/docs/devops/container/helm/install-helm3-by-binaries.md",
+      },
+    ],
+  },
+  {
+    text: "Rancher",
+    collapsed: true,
+    items: [
+      {
+        text: "脚本安装 RKE2",
+        link: "/docs/devops/container/rancher/install-rke2.md",
+      },
+      {
+        text: "Helm 安装 Rancher Server",
+        link: "/docs/devops/container/rancher/install-rancher-by-helm.md",
+      },
+    ],
+  },
+];
 
-        ]
-    }
-]
-
-export default ContainerMenu;
+export default containerMenu;
