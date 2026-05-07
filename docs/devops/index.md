@@ -6,10 +6,10 @@
 
 ## 推荐入口
 
-- 基础运维：系统初始化、防火墙、Systemd、Nginx、Supervisor、Harbor、NFS、LVM
-- 容器平台：Docker、Kubernetes、Helm、Rancher
-- CI/CD：Jenkins、K8S 集成、发布流程、SonarQube
-- 监控告警：Prometheus、Grafana、Alertmanager、SkyWalking、Zabbix
+- [基础运维](/docs/devops/base/)：系统初始化、防火墙、Systemd、Nginx、Supervisor、Harbor、NFS、LVM
+- [容器平台](/docs/devops/container/)：Docker、Kubernetes、Helm、Rancher
+- [CI/CD](/docs/devops/cicd/)：Jenkins、K8S 集成、发布流程
+- [监控告警](/docs/devops/monitoring/)：Prometheus、Grafana、Alertmanager
 
 ## 文档约定
 
@@ -19,4 +19,4 @@
 ## 注意事项
 
 - 纯备忘录、核对记录、空白草稿不进入主导航。
-- 与生产故障相关、仍可能复用的历史文档优先放入 `archive/`，不直接删除。
+- 与生产故障相关、仍可能复用的历史文档优先放入 `archive/`；明确废弃且不再保留的方案直接移除。

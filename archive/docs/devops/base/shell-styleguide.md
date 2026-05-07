@@ -6,8 +6,8 @@
 
 :::tip 正确示例
 - check-nginx.sh
-- mysqld-log-output-zabbix.sh
-- java-errlog-output-zabbix.sh
+- mysqld-log-output-monitor.sh
+- java-errlog-output-monitor.sh
 :::
 
 ## 二、环境

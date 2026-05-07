@@ -7,6 +7,10 @@ const devopsMenu = [
         text: "DevOps 知识库概览",
         link: "/docs/devops/",
       },
+      {
+        text: "基础运维分类首页",
+        link: "/docs/devops/base/",
+      },
     ],
   },
   {

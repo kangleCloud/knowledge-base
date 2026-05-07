@@ -2,38 +2,48 @@
 
 ## 1. 本次整理摘要
 
-- 整理时间：2026-05-06
-- 整理目标：将 `knowledge-base` 收口为 `backend/`、`database/`、`middleware/`、`devops/`、`troubleshooting/` 五大类，并对历史文档做归档、去重、脱敏和结构统一。
-- 验证结果：`npm run docs:build` 已通过。
+- 整理时间：2026-05-07
+- 整理目标：收口 `knowledge-base` 的知识库结构，统一分类、索引、命名与文档规范，并对敏感信息、过期文档和历史文档做清理。
+- 本次增量重点：重构 `DevOps` 分类入口，新增四个子分类首页，并全量删除 `SonarQube`、`SkyWalking`、`Zabbix` 相关主库与归档文档。
 
-## 2. 最终结构
+## 2. 当前最终结构
 
 - `docs/backend/`：22 篇 Markdown
 - `docs/database/`：19 篇 Markdown
 - `docs/middleware/`：28 篇 Markdown
-- `docs/devops/`：99 篇 Markdown
+- `docs/devops/`：91 篇 Markdown
 - `docs/troubleshooting/`：5 篇 Markdown
-- `archive/`：35 个归档文件
-- `public/images/`：47 个迁移后的静态资源文件
+- `archive/`：27 个归档文件
+- `public/images/`：47 个静态资源文件
 
 ## 3. 站点与索引调整
 
 - 重写首页 [index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/index.md)。
 - 新增仓库索引 [README.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/README.md)。
-- 新增五个分类首页：
+- 主分类首页保留为：
   - [docs/backend/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/backend/index.md)
   - [docs/database/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/database/index.md)
   - [docs/middleware/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/middleware/index.md)
   - [docs/devops/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/devops/index.md)
   - [docs/troubleshooting/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/troubleshooting/index.md)
+- 本次新增 `DevOps` 子分类首页：
+  - [docs/devops/base/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/devops/base/index.md)
+  - [docs/devops/container/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/devops/container/index.md)
+  - [docs/devops/cicd/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/devops/cicd/index.md)
+  - [docs/devops/monitoring/index.md](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/docs/devops/monitoring/index.md)
+- `DevOps` 首页推荐入口已改为可点击分类入口：
+  - 基础运维
+  - 容器平台
+  - CI/CD
+  - 监控告警
 - 重写 `.vitepress` 导航与侧边栏：
   - [config.mts](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/.vitepress/config.mts)
   - [nav.mts](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/.vitepress/nav.mts)
   - [menu/index.mts](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/.vitepress/menu/index.mts)
-  - 新增 `backend`、`monitoring`、`troubleshooting` 菜单。
-- 为避免归档文件进入站点构建，已在 `config.mts` 中增加 `srcExclude: ["archive/**"]`。
+  - `devops/base.ts`、`devops/container.ts`、`devops/cicd.ts`、`devops/monitoring.ts`
+- 为避免归档文件进入站点构建，继续使用 `srcExclude: ["archive/**"]`。
 
-## 4. 迁移与新增
+## 4. 迁移、新增与归并
 
 ### 4.1 Backend
 
@@ -60,7 +70,7 @@
 - MySQL：`advanced-sql-in-mysql.md`、`basic-specification.md`、`data-definition-language.md`、`db-table-specification.md`、`mgr.md`、`mmss.md`、`percona-xtrabackup-2.4.md`、`percona-xtrabackup-8.0.md`、`sql-develop-specification.md`、`system-variable-for-mysql5.7.md`、`system-variable-for-mysql8.0.md`
 - MongoDB：`install-mongodb-6.0.md`、`install-mongodb-7.0.md`
 - Hive：`sql.md`
-- 达梦：保留并归并到 `dameng/`，其中原 `docs/database/dm/base.md` 改为 `docs/database/dameng/base.md`
+- 达梦：原 `docs/database/dm/base.md` 归并为 `docs/database/dameng/base.md`
 
 ### 4.3 Middleware
 
@@ -75,7 +85,7 @@
 - Redis：`install-redis7.0.md`、`developing-guideline.md`
 - XXL-JOB：`xxl-job-2.5-install.md`
 
-原有 `knowledge-base` 中已有且保留为主版本的内容包括：
+原有主版本继续保留：
 
 - Nacos：`install-nacos2.2.md`、`install-nacos2.5.md`、`cluster.md`
 - RabbitMQ：`introduction.md`、`install-3.11.md`、`mirror-queues.md`、`delayed-message-plugin.md`
@@ -91,11 +101,18 @@
 - 服务器系统：`alternatives.md`、`cockpit.md`、`disk-expansion.md`、`firewalld.md`、`initialization.md`、`systemd.md`、`systemd-command.md`
 - Nginx：`best-practices.md`、`ha-with-keepalived.md`、`install-with-lua.md`、`integration-php-fpm.md`、`location-example.md`、`nginx-lua-module.md`、`recompiling-with-modules.md`、`smooth-upgrades.md`、`upstream.md`
 - Node / Python：`nodejs/install-nodejs.md`、`python/conda.md`、`python/install-python2-on-openeuler.md`、`python/install-python3-on-centos7.md`
-- 监控：`monitoring/**`（Prometheus、Grafana、Alertmanager、SkyWalking、Zabbix 6）
-- 容器：`rancher/install-rke2.md`、`rancher/install-rancher-by-helm.md`
-- CI/CD：`deploy/*`、`sonarqube-install.md`
+- 容器平台：`rancher/install-rke2.md`、`rancher/install-rancher-by-helm.md`
+- CI/CD：`deploy/*`
+- 监控告警：`Prometheus`、`Grafana`、`Alertmanager` 及通用监控规范
 
-原有 `knowledge-base` 中继续保留为主版本的内容包括：
+本次针对 `DevOps` 的补充与归并：
+
+- 新增 `base/`、`container/`、`cicd/`、`monitoring/` 四个可访问分类首页
+- `docs/devops/index.md` 从纯文本列表改为可点击入口
+- `monitoring/metrics/*` 与 `monitoring/monitorkeys.md` 从产品绑定文档改写为通用监控指标规范
+- `SonarQube`、`SkyWalking`、`Zabbix` 相关文档从主库与归档中全量移除，不再保留历史入口
+
+原有主版本继续保留：
 
 - `devops/base/java/install-jdk.md`
 - `devops/base/java/install-maven.md`
@@ -130,9 +147,9 @@
 - `docs/devops/base/ansiable/` -> `docs/devops/base/ansible/`
 - `docs/devops/container/kubernetes/kubernetes-install/Kubernetes-base-install.md` -> `docs/devops/container/kubernetes/kubernetes-install/kubernetes-base-install.md`
 
-## 6. 归档
+## 6. 归档保留
 
-以下文档因历史价值、版本过旧、重复实现或不再纳入主导航，已移入 `archive/`：
+以下内容因历史价值、旧版本兼容、重复实现或不再纳入主导航，保留在 `archive/`：
 
 - `archive/docs/backend/practice/lua-private-image.md`
 - `archive/docs/backend/practice/nexus-repository-use.md`
@@ -151,13 +168,6 @@
 - `archive/docs/devops/base/supervisor/webui-archive.md`
 - `archive/docs/devops/base/xxzx-checklists.md`
 - `archive/docs/devops/container/k8s/install-helm3-by-binaries.md`
-- `archive/docs/devops/monitor/prometheus/config/prometheus.md`
-- `archive/docs/devops/monitor/prometheus/node/elasticsearch_exporter.md`
-- `archive/docs/devops/monitor/prometheus/node/nginx_exporter.md`
-- `archive/docs/devops/monitor/prometheus/node/node_exporter.md`
-- `archive/docs/devops/monitor/prometheus/node/nginx-dashboard.json`
-- `archive/docs/devops/monitor/prometheus/node/node_dashboard.json`
-- `archive/docs/devops/monitoring/zabbix/zabbix5/*`
 - `archive/docs/middleware/elastic/install-es8.14.md`
 - `archive/docs/middleware/elastic/install-kibana.md`
 - `archive/docs/middleware/redis/cluster.md`
@@ -165,16 +175,13 @@
 
 归档原因说明：
 
-- `MongoDB 4.4`：版本过旧，但仍可能用于历史环境排查。
-- `Zabbix 5.4`：旧版本监控方案，保留历史兼容价值。
-- `Redis install-redis.md`、`cluster.md`：被 `install-redis7.0.md` 与 `redis-cluster.md` 取代。
-- `Elastic 8.14 / Kibana 旧版入口`：保留历史版本，不作为主导航入口。
-- `lua-private-image`、`nexus-repository-use`、`nlr-build-high-performance-server`：暂不进入主知识库，但可能有参考价值。
-- `旧 monitor` 目录：被 `docs/devops/monitoring/` 结构替代。
+- 旧版本安装文档：保留历史环境兼容参考，不作为主导航入口。
+- 临时实践稿、检查清单、旧结构文档：保留背景信息，但不纳入当前知识库主结构。
+- 已有更新主版本的文档：保留旧稿以便追溯差异。
 
 ## 7. 删除
 
-直接删除的文件包括：
+### 7.1 首轮整理删除
 
 - `api-examples.md`
 - `markdown-examples.md`
@@ -189,11 +196,57 @@
   - `docs/middleware/rabbitmq/developing-guideline.md`
   - `docs/middleware/rabbitmq/quorum-queues.md`
 
+### 7.2 本次 DevOps 清理删除
+
+- `docs/devops/cicd/sonarqube-install.md`
+- `docs/devops/monitoring/skywalking/install.md`
+- `docs/devops/monitoring/zabbix/quickstart.md`
+- `docs/devops/monitoring/zabbix/zabbix-scripts/java-error-keyword.md`
+- `docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-agent.md`
+- `docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-agent2.md`
+- `docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-jmx.md`
+- `docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-proxy.md`
+- `docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-server.md`
+- `docs/devops/monitoring/zabbix/zabbix6/integrate-mysql.md`
+- `docs/devops/monitoring/zabbix/zabbix6/integrate-nginx.md`
+- `docs/devops/monitoring/zabbix/zabbix6/integrate-phpfpm.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/install-zabbix54-agent.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/install-zabbix54-jmx.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/install-zabbix54-proxy.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/install-zabbix54-server.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/integrate-mysql.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/integrate-nginx.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/integrate-phpfpm.md`
+- `archive/docs/devops/monitoring/zabbix/zabbix5/integrate-redis.md`
+
 删除原因说明：
 
-- 默认示例文件、空白页、无内容草稿与不再使用的占位首页不保留。
+- 默认示例文件、空白页、无内容草稿与占位首页不保留。
+- `SonarQube`、`SkyWalking`、`Zabbix` 已明确不再保留，因此主库与归档历史副本均做物理删除。
 
-## 8. 脱敏
+## 8. 补全、统一与合并
+
+- 统一 `DevOps` 入口结构：主入口 + 四个子分类首页。
+- 为 `base/`、`container/`、`cicd/`、`monitoring/` 分类首页补齐：
+  - 适用场景
+  - 推荐阅读
+  - 子主题清单
+  - 代表文档入口
+  - 注意事项
+- 统一 `DevOps` 菜单入口，使各子分类均可从侧边栏直接进入分类首页。
+- 将以下文档从产品绑定写法改为通用监控规范写法：
+  - `docs/devops/monitoring/metrics/linux.md`
+  - `docs/devops/monitoring/metrics/mysql.md`
+  - `docs/devops/monitoring/metrics/nginx.md`
+  - `docs/devops/monitoring/metrics/redis.md`
+  - `docs/devops/monitoring/monitorkeys.md`
+- 为避免主站正文继续暗示已废弃方案仍被支持，同时修正文内示例：
+  - `docs/middleware/rabbitmq/introduction.md`
+  - `docs/devops/base/server-os/upgrade-openssl.md`
+  - `archive/docs/devops/base/xxzx-checklists.md`
+  - `archive/docs/devops/base/shell-styleguide.md`
+
+## 9. 脱敏
 
 已完成以下类型的脱敏：
 
@@ -219,24 +272,21 @@
 - `<PROXYSQL_PASSWORD>`
 - `<SMTP_PASSWORD>`
 
-## 9. 链接与静态资源
+## 10. 链接与静态资源
 
-- 新增 `public/images/` 下的迁移图片资源，覆盖后端实践、中间件、DevOps 监控等场景。
-- 修复了部分旧站点遗留内部链接：
-  - `devops/baseops/*` -> `docs/devops/base/*`
-  - `Redis install-redis.html` -> `install-redis7.0.md`
-  - `Analysis-IK` 相关链接 -> 当前 `docs/middleware/elastic/install-es-analysis-ik.md`
-- 对于原先指向 `memo.html` 的命名规范链接，已改为正文说明，避免保留无效跳转。
+- 保留 `public/images/` 下的现有有效资源，总计 47 个文件。
+- 本次 `DevOps` 清理未发现 `SonarQube`、`SkyWalking`、`Zabbix` 的独立残留图片资源。
+- `archive/**` 继续通过 `srcExclude` 排除，不参与站点构建。
 
-## 10. 验证结果
+## 11. 验证结果
 
-- 敏感字段扫描：未发现真实敏感信息，扫描结果仅保留占位符。
-- 构建验证：`npm run docs:build` 通过。
-- 归档验证：`archive/**` 已通过 `srcExclude` 排除，不参与站点构建。
+- 敏感字段扫描：未发现真实敏感信息，结果仅保留占位符。
+- 关键字扫描：`SonarQube|SkyWalking|Zabbix` 仅出现在本整理报告中。
+- 构建验证：`npm run docs:build` 已通过。
+- 构建告警：存在 Vite chunk size 警告，但不影响本次构建成功。
 
-## 11. 遗留 TODO
+## 12. 遗留 TODO
 
-- 部分历史文档仍保留原始 Markdown/HTML 混写风格，后续如需进一步统一，可按分类逐步重写。
-- `docs/devops/base/php7/*`、`docs/devops/monitoring/metrics/*`、`docs/devops/monitoring/monitorkeys.md` 目前已纳入结构，但仍可继续补齐“适用场景 / 验证 / 回滚”模板。
+- 部分历史文档仍保留原始 Markdown/HTML 混写风格，后续可按分类继续重写。
 - `docs/database/dameng/shuoming-dameng.md` 仍偏操作手册风格，后续可进一步整理为更标准的小节结构。
-- 当前报告按“主导航文档 + 归档文档”维度记录；若后续继续大规模精修，建议在报告末尾追加增量记录。
+- 如后续继续大规模精修，建议在本报告末尾追加增量记录，避免不同轮次整理结论冲突。

@@ -1,12 +1,8 @@
 # Redis监控项
 
-为确保监控指标项的一致性和可读性，并同时减轻构建模板的工作负担，**团队约定非自定义监控项直接采用 Zabbix 官方模板中的监控项名称**。
+为确保监控指标项的一致性和可读性，**团队约定优先使用通用指标名称，并在不同监控平台中保持同一语义**。
 
-图例：🔥=异常告警；⭐=自定义图形或监控项。
-
-:::tip
-使用 Zabbix5.4 及其更高版本构建监控系统时，<font color="red">约定使用官方模板：</font>[Redis by Zabbix agent 2](https://www.zabbix.com/integrations/redis)。
-:::
+图例：🔥=异常告警；⭐=自定义图表或监控项。
 
 ## 无图形监控项
 
@@ -16,7 +12,7 @@
 
 ### 0x01.Connections
 
-⭐Zabbix 图形名称：`SJFY Redis: Connections`
+⭐推荐图表名称：`SJFY Redis: Connections`
 
 - Connected clients - 客户端连接数 => 超过最大连接数的80%报警 🔥
 - Rejected connections - 由于达到 maxclients 而被拒绝的连接数
@@ -26,7 +22,7 @@
 
 ### 0x01.Memory
 
-⭐Zabbix 图形名称：`SJFY Redis: Memory`
+⭐推荐图表名称：`SJFY Redis: Memory`
 
 - Max memory - 分配给 Redis 的最大内存 => 超过物理内存的50% 🔥
 - Memory used - 内部存储的数据内存使用量
@@ -36,15 +32,15 @@
 ### 0x01.Memory fragmentation
 
 :::warning
-在基于 Zabbix 构建监控时，约定复用现有 Redis 监控模板中的 "Redis: Memory Fragmentation" 图形，并且新增相应的触发器。
+建议复用现有 Redis 内存碎片图表，并针对内存碎片率补充独立触发条件。
 :::
 
-Zabbix 图形名称：`Memory fragmentation`
+推荐图表名称：`Memory fragmentation`
 
 - Memory fragmentation ratio - 内存碎片率 => 超过1.5报警 🔥
 
 :::tip
-Zabbix 官网提供的模板中对应的监控项是 Memory fragmentation ratio，也可通过如下计算方式得到内存碎片率：mem_fragmentation_ratio = used_memory_rss / used_memory
+无论底层平台如何实现，对应指标的语义均应保持为 `Memory fragmentation ratio`，也可通过如下计算方式得到：`mem_fragmentation_ratio = used_memory_rss / used_memory`
 :::
 
 ## 性能
@@ -52,23 +48,23 @@ Zabbix 官网提供的模板中对应的监控项是 Memory fragmentation ratio�
 ### 0x01.Commands
 
 :::warning
-在基于 Zabbix 构建监控时，约定复用现有 Redis 监控模板中的 "Redis: Commands" 图形，并且新增相应的触发器。
+建议复用现有 Redis 请求速率图表，并结合业务峰值补充独立触发条件。
 :::
 
-Zabbix 图形名称：`Commands`
+推荐图表名称：`Commands`
 
 - Instantaneous operations per sec = 每秒处理的操作数 => 超过500报警（实际阈值需参照具体情况） 🔥
 
 ### 0x02.Keyspace
 
-⭐Zabbix 图形名称：`SJFY Redis: Keyspace`
+⭐推荐图表名称：`SJFY Redis: Keyspace`
 
 - SJFY Redis: Keyspace hits per sec - 命中次数 ⭐
 - SJFY Redis: Keyspace misses per sec - 没命中次数 ⭐
 
 ### 0x03.Hit Rate
 
-⭐Zabbix 图形名称：`SJFY Redis: Hit Rate`
+⭐推荐图表名称：`SJFY Redis: Hit Rate`
 
 - SJFY Redis: Cache Hit Rate - 缓存命中率 ⭐
 

@@ -1,6 +1,6 @@
 # 监控指标
 
-为确保监控指标项的一致性和可读性，并同时减轻构建模板的工作负担，**团队约定直接采用 Zabbix 官方模板中的监控项名称**。
+为确保监控指标项的一致性和可读性，**团队约定优先采用通用指标名称，并在不同监控平台中保持同一语义**。
 
 :::tip 图例
 - 🔥 异常告警
@@ -32,7 +32,7 @@
 
 ### 0x01.堆内存
 
-**Zabbix 图形名称：JVM Heap Memory**
+**推荐图表名称：JVM Heap Memory**
 
 - 已提交（分配）的堆内存（Heap memory committed）
 - 最大堆内存（Heap memory maximum size）
@@ -169,6 +169,5 @@
 
 ## 参考资料
 
-- https://www.zabbix.com/cn/integrations
 - https://help.aliyun.com/document_detail/148793.htm
 - https://blog.csdn.net/qq_39378493/article/details/116701333

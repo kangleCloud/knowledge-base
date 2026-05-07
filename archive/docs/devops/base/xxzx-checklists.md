@@ -121,11 +121,11 @@
 
 - Prometheus
 - Grafana
-- Zabbix
+- 监控平台
     - 版本
-    - Server or Proxy
-    - Agent 版本
-    - <font color="red">数据库与业务数据库分离</font>
+    - 采集端与服务端角色
+    - Agent / Exporter 版本
+    - <font color="red">监控存储与业务数据库分离</font>
 - Php
     - 版本
     - 编译时禁用特定参数解决中文乱码

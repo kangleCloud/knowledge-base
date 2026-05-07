@@ -28,6 +28,6 @@ el9 RPM 包需要 OpenSSL v3 的支持，但是将 OpenSSL 升级至 v3.0.8 后�
 - libstdc++.so.6(GLIBCXX_3.4.29)(64bit) is needed by erlang-25.3.2-1.el9.x86_64
 :::
 
-系统升级 OpenSSL v3 后，不但没有解决安装过程中的问题，还会导致其他软件（如Zabbix5.4_proxy）安装失败，所以**约定使用 el8 RPM 包**。
+系统升级 OpenSSL v3 后，不但没有解决安装过程中的问题，还会导致部分旧版依赖 OpenSSL 1.1 的运维组件安装失败，所以**约定使用 el8 RPM 包**。
 
 [Zero dependency Erlang/OTP 25.3.2 packages](https://github.com/rabbitmq/erlang-rpm/releases/tag/v25.3.2) 中有很多 rpm 包，如果在 Centos7 操作系统安装，就选择 el7 RPM 包；如果在 OpenEuler 22.03 操作系统上安装，<a href="/docs/middleware/rabbitmq/install-3.11.html#二、在openeuler上安装erlang" target="_blank">就选择 el8 RPM 包</a>。

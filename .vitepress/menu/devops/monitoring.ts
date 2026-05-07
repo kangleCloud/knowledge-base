@@ -7,6 +7,10 @@ const devopsMonitoringMenu = [
         text: "DevOps 知识库概览",
         link: "/docs/devops/",
       },
+      {
+        text: "监控告警分类首页",
+        link: "/docs/devops/monitoring/",
+      },
     ],
   },
   {
@@ -67,51 +71,31 @@ const devopsMonitoringMenu = [
         text: "Alertmanager 部署与升级",
         link: "/docs/devops/monitoring/alertmanager/deploy.md",
       },
-      {
-        text: "SkyWalking 安装",
-        link: "/docs/devops/monitoring/skywalking/install.md",
-      },
     ],
   },
   {
-    text: "Zabbix",
+    text: "监控规范",
     collapsed: true,
     items: [
       {
-        text: "Zabbix 快速入门",
-        link: "/docs/devops/monitoring/zabbix/quickstart.md",
+        text: "Linux 基础监控项",
+        link: "/docs/devops/monitoring/metrics/linux.md",
       },
       {
-        text: "Zabbix 6.0 Server",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-server.md",
+        text: "MySQL 监控项",
+        link: "/docs/devops/monitoring/metrics/mysql.md",
       },
       {
-        text: "Zabbix 6.0 Proxy",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-proxy.md",
+        text: "Nginx 监控项",
+        link: "/docs/devops/monitoring/metrics/nginx.md",
       },
       {
-        text: "Zabbix 6.0 Agent",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-agent.md",
+        text: "Redis 监控项",
+        link: "/docs/devops/monitoring/metrics/redis.md",
       },
       {
-        text: "Zabbix 6.0 Agent2",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-agent2.md",
-      },
-      {
-        text: "Zabbix 6.0 JMX",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/install-zabbix60-jmx.md",
-      },
-      {
-        text: "Zabbix 集成 MySQL",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/integrate-mysql.md",
-      },
-      {
-        text: "Zabbix 集成 Nginx",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/integrate-nginx.md",
-      },
-      {
-        text: "Zabbix 集成 PHP-FPM",
-        link: "/docs/devops/monitoring/zabbix/zabbix6/integrate-phpfpm.md",
+        text: "监控指标总览",
+        link: "/docs/devops/monitoring/monitorkeys.md",
       },
     ],
   },

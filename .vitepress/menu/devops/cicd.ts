@@ -1,5 +1,19 @@
 const devopsCicdMenu = [
   {
+    text: "Overview",
+    collapsed: false,
+    items: [
+      {
+        text: "DevOps 知识库概览",
+        link: "/docs/devops/",
+      },
+      {
+        text: "CI/CD 分类首页",
+        link: "/docs/devops/cicd/",
+      },
+    ],
+  },
+  {
     text: "Jenkins 与 CI/CD",
     collapsed: false,
     items: [
@@ -36,16 +50,6 @@ const devopsCicdMenu = [
       {
         text: "Vue 项目部署",
         link: "/docs/devops/cicd/deploy/deploy-vue.md",
-      },
-    ],
-  },
-  {
-    text: "质量平台",
-    collapsed: true,
-    items: [
-      {
-        text: "SonarQube 安装",
-        link: "/docs/devops/cicd/sonarqube-install.md",
       },
     ],
   },

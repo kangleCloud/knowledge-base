@@ -7,6 +7,10 @@ const containerMenu = [
         text: "DevOps 知识库概览",
         link: "/docs/devops/",
       },
+      {
+        text: "容器平台分类首页",
+        link: "/docs/devops/container/",
+      },
     ],
   },
   {

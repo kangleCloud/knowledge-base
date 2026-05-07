@@ -1,10 +1,8 @@
 # MySQL监控项
 
-为确保监控指标项的一致性和可读性，并同时减轻构建模板的工作负担，**团队约定非自定义监控项直接采用 Zabbix 官方模板中的监控项名称**。
+为确保监控指标项的一致性和可读性，**团队约定优先使用通用指标名称，并在不同监控平台中保持同一语义**。
 
-图例：🔥=异常告警；⭐=自定义图形或监控项。
-
-Zabbix 官网提供的监控模板：https://www.zabbix.com/integrations/mysql
+图例：🔥=异常告警；⭐=自定义图表或监控项。
 
 ## 无图形监控项
 
@@ -15,7 +13,7 @@ Zabbix 官网提供的监控模板：https://www.zabbix.com/integrations/mysql
 
 ### 0x01.Connections
 
-⭐Zabbix 图形名称：`SJFY MySQL: Connections`
+⭐推荐图表名称：`SJFY MySQL: Connections`
 
 - SJFY Mysql: Max connections - 最大连接数 ⭐
 - Connections per second - 每秒连接数 => 超过200报警（实际阈值需参照具体情况） 🔥
@@ -23,7 +21,7 @@ Zabbix 官网提供的监控模板：https://www.zabbix.com/integrations/mysql
 
 ### 0x02.Threads
 
-Zabbix 图形名称：`Threads`
+推荐图表名称：`Threads`
 
 - Threads cached
 - Threads connected - 连接的线程数 => 超过500报警（实际阈值需参照具体情况） 🔥
@@ -34,7 +32,7 @@ Zabbix 图形名称：`Threads`
 
 ### 0x01.Operations
 
-Zabbix 图形名称：`Operations`
+推荐图表名称：`Operations`
 
 - Command Select per second - 每秒 Select 操作数量 => 超过500报警（实际阈值需参照具体情况） 🔥
 - Command Insert per second - 每秒 Insert 操作数量
@@ -45,20 +43,20 @@ Zabbix 图形名称：`Operations`
 
 ### 0x01.InnoDB row lock time
 
-⭐Zabbix 图形名称：`SJFY MySQL: InnoDB row lock time` 
+⭐推荐图表名称：`SJFY MySQL: InnoDB row lock time` 
 
 - InnoDB row lock time - InnoDB 行锁定时间
 - InnoDB row lock time max - InnoDB 最大行锁定时间
 
 ### 0x02.Innodb row lock waits
 
-⭐Zabbix 图形名称：`SJFY MySQL: Innodb row lock waits` 
+⭐推荐图表名称：`SJFY MySQL: Innodb row lock waits` 
 
 - Innodb row lock waits - InnoDB表上的操作等待行锁的次数
 
 ### 0x03.Queries
 
-Zabbix 图形名称：`Queries`
+推荐图表名称：`Queries`
 
 - Queries per second - 服务器执行的语句数
 - Slow queries per second - 时间超过long_query_time秒数的查询数
