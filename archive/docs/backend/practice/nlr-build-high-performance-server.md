@@ -287,7 +287,7 @@ access_by_lua '
 
 ## 4. 总结
 从以上描述可以看到， 该组件对目标系统无任何侵入性;使用简单，只需要在Nginx层做一些简单的配置;并且只要Nginx、redis不挂，目标系统即使挂掉只要redis中缓存有效仍然可以提供服务。整体思路其实很简单，就是在目标系统外加一层代理，然后我们就可以在代理层做各种事情。
-目前兰州项目已测试使用，示例 GIT 地址：https://git.example.com/ilanzhou/lua-cache.git
+目前示例项目已测试使用，示例 GIT 地址：https://git.example.com/demo-project/lua-cache.git
 
 ## 5. 参考资料
 - https://dbaplus.cn/news-21-678-1.html?hmsr=toutiao.io
