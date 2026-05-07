@@ -31,7 +31,7 @@ rpm -ivh /usr/local/src/jenkins-2.424-1.1.noarch.rpm
 **调整启动配置**
 
 :::tip
-前提：启动最新版Jenkins需要使用JDK11，请提前[安装JDK11](https://ttd.chinacici.com/devops/java/install-jdk.html#%E5%9F%BA%E4%BA%8Etar-gz%E5%8C%85%E5%AE%89%E8%A3%85jdk11)
+前提：启动最新版Jenkins需要使用JDK11，请提前[安装JDK11](../base/java/install-jdk.md)
 :::
 
 编辑/usr/lib/systemd/system/jenkins.service文件，并根据以下配置进行修改：

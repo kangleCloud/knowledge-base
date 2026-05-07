@@ -106,7 +106,7 @@ spec:
       steps {
         container('base') {
           sh 'chown 1000.1000 -R ./'
-          git(url: 'https://gitlab.chinacici.com/dykunshan-backend/java-mini-activity.git', credentialsId: 'gitlab-credential', branch: "test", changelog: true, poll: false)
+          git(url: 'https://git.example.com/dykunshan-backend/java-mini-activity.git', credentialsId: 'gitlab-credential', branch: "test", changelog: true, poll: false)
         }
       }
     }
@@ -177,4 +177,3 @@ EOF
   }
 }
 ```
-

@@ -2,20 +2,20 @@
 
 ## 一、开启签名验证
 
-### 0x01.引入sjfy-sign-spring-boot-starter
+### 0x01.引入demo-sign-spring-boot-starter
 :::tip 
 如果旧项目中没有该签名starter，需要从springboot-mybatis-plus代码仓中复制到项目的starters模块中，并且在pom中引入
 :::
 在旧项目的starters模块的pom.xml引入签名starter
 ```java
-<module>sjfy-sign-spring-boot-starter</module>
+<module>demo-sign-spring-boot-starter</module>
 ```
 
 在需要开启签名的app或者admin模块的pom.xml中引入
 ```java
 <dependency>
-    <groupId>cn.chinacici</groupId>
-    <artifactId>sjfy-sign-spring-boot-starter</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>demo-sign-spring-boot-starter</artifactId>
 </dependency>
 ```
 
