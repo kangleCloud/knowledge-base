@@ -14,22 +14,25 @@
 
 ### 0x01.配置镜像源
 
-::: el-tabs
---- el-tab-item 麒麟V10
+::: tabs
+
+=== 麒麟V10
 暂无
+
 ---
 
---- el-tab-item openEuler22.03（如有需要）
+=== openEuler22.03（如有需要）
 ```bash
 mv /etc/yum.repos.d/CentOS-Base.repo \
    /etc/yum.repos.d/CentOS-Base.repo.bak
 mv /etc/yum.repos.d/docker-ce.repo /etc/yum.repos.d/docker-ce.repo.bak
 ```
+
 ---
 
---- el-tab-item Centos7
+=== Centos7
 <a href="/docs/devops/base/server-os/initialization.html#附录一、镜像源" target="_blank">配置镜像源</a>
----
+
 :::
 
 ### 0x02.安装必要组件
