@@ -50,11 +50,11 @@ $config['supervisor_servers'] = array(
                 // 'username' => 'yourusername',
                 // 'password' => 'yourpass'
         ),  // 这部分是supervisor服务器中的配置
-        '10.1.0.60:wxhebi' => array(
+        '10.1.0.60:demo-project-a' => array(
                 'url' => '10.1.0.60/RPC2',
                 'port' => '19001'
         ),
-        '10.1.0.60:dykunshan' => array(
+        '10.1.0.60:demo-project-b' => array(
                 'url' => '10.1.0.60/RPC2',
                 'port' => '29001'
         ),

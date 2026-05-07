@@ -26,17 +26,17 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 ```xml
     <properties>
 		...
-        <sjfy.version>1.0-SNAPSHOT</sjfy.version>
+        <demo.version>1.0-SNAPSHOT</demo.version>
 		...
     </properties>
 
     <dependencies>
         ...
         <dependency>
-            <groupId>cn.chinacici</groupId>
+            <groupId>com.example</groupId>
             <!-- 内部开发的starter -->
             <artifactId>xxx-starter</artifactId>
-            <version>${sjfy.version}</version>
+            <version>${demo.version}</version>
         </dependency>
         ...
     </dependencies>
@@ -55,7 +55,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <servers>
     <server>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <username>${USERNAME}</username>
       <password>${PASSWORD}</password>
     </server>
@@ -63,9 +63,9 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <mirrors>
     <mirror>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>https://nexus.chinacici.com/repository/maven-public/</url>
+      <url>https://repo.example.com/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
@@ -84,11 +84,11 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
         </properties>
     </profile>
     <profile>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <repositories>
           <repository>
           <id>central</id>
-          <url>https://nexus.chinacici.com/repository/maven-public/</url>
+          <url>https://repo.example.com/repository/maven-public/</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
           </repository>
@@ -96,7 +96,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
       <pluginRepositories>
           <pluginRepository>
           <id>central</id>
-          <url>https://nexus.chinacici.com/repository/maven-public/</url>
+          <url>https://repo.example.com/repository/maven-public/</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
           </pluginRepository>
@@ -106,7 +106,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <activeProfiles>
       <activeProfile>jdk1.8</activeProfile>
-      <activeProfile>sjfy-nexus</activeProfile>
+      <activeProfile>demo-nexus</activeProfile>
   </activeProfiles>
 
 </settings>
@@ -121,7 +121,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
 ```xml
 	...    
-	<groupId>cn.chinacici</groupId>
+	<groupId>com.example</groupId>
     <artifactId>private-starters</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -133,14 +133,14 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
     <distributionManagement>
         <repository>
-            <id>sjfy-nexus</id>
-            <name>sjfy-nexus-releases</name>
-            <url>https://nexus.chinacici.com/repository/maven-releases/</url>
+            <id>demo-nexus</id>
+            <name>demo-nexus-releases</name>
+            <url>https://repo.example.com/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>sjfy-nexus</id>
-            <name>sjfy-nexus-snapshots</name>
-            <url>https://nexus.chinacici.com/repository/maven-snapshots/</url>
+            <id>demo-nexus</id>
+            <name>demo-nexus-snapshots</name>
+            <url>https://repo.example.com/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 	...
@@ -159,7 +159,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <servers>
     <server>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <username>${USERNAME}</username>
       <password>${PASSWORD}</password>
     </server>
@@ -167,9 +167,9 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <mirrors>
     <mirror>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>https://nexus.chinacici.com/repository/maven-public/</url>
+      <url>https://repo.example.com/repository/maven-public/</url>
     </mirror>
   </mirrors>
 
@@ -188,11 +188,11 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
         </properties>
     </profile>
     <profile>
-      <id>sjfy-nexus</id>
+      <id>demo-nexus</id>
       <repositories>
           <repository>
           <id>central</id>
-          <url>https://nexus.chinacici.com/repository/maven-public/</url>
+          <url>https://repo.example.com/repository/maven-public/</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
           </repository>
@@ -200,7 +200,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
       <pluginRepositories>
           <pluginRepository>
           <id>central</id>
-          <url>https://nexus.chinacici.com/repository/maven-public/</url>
+          <url>https://repo.example.com/repository/maven-public/</url>
           <releases><enabled>true</enabled></releases>
           <snapshots><enabled>true</enabled></snapshots>
           </pluginRepository>
@@ -210,7 +210,7 @@ Nexus私仓"通常指的是Sonatype Nexus Repository Manager，它是一个用�
 
   <activeProfiles>
       <activeProfile>jdk1.8</activeProfile>
-      <activeProfile>sjfy-nexus</activeProfile>
+      <activeProfile>demo-nexus</activeProfile>
   </activeProfiles>
 
 </settings>

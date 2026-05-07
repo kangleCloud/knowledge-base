@@ -31,7 +31,7 @@ https://github.com/hipages/php-fpm_exporter/releases
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/php-fpm_exporter_2.2.0_linux_amd64.tar.gz
+wget https://github.com/hipages/php-fpm_exporter/releases/download/v2.2.0/php-fpm_exporter_2.2.0_linux_amd64.tar.gz
 ```
 
 ```bash
@@ -182,4 +182,3 @@ systemctl restart prometheus
 
 - https://github.com/hipages/php-fpm_exporter
 - https://grafana.com/grafana/dashboards/3901
-

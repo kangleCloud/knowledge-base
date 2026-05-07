@@ -14,7 +14,7 @@ mkdir -p /usr/local/prometheus-exporters
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/redis_exporter-v1.82.0.linux-amd64.tar.gz
+wget https://github.com/oliver006/redis_exporter/releases/download/v1.82.0/redis_exporter-v1.82.0.linux-amd64.tar.gz
 ```
 
 ```bash
@@ -223,4 +223,3 @@ requirepass "你的Redis密码"
 
 - [Redis Exporter GitHub](https://github.com/oliver006/redis_exporter)
 - [Prometheus OSS | Redis exporter](https://grafana.com/oss/prometheus/exporters/redis-exporter/)
-

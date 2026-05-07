@@ -40,9 +40,9 @@ mkdir /usr/local/src/rke2-artifacts-1.33.4 \
 ### 0x01.下载相关资源
 
 ```bash
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/rke2-images.linux-amd64.tar.zst
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/rke2.linux-amd64.tar.gz
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/sha256sum-amd64.txt
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/rke2-images.linux-amd64.tar.zst
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/rke2.linux-amd64.tar.gz
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/sha256sum-amd64.txt
 ```
 
 ```bash
@@ -97,9 +97,9 @@ mkdir /usr/local/src/rke2-artifacts-1.33.4 \
 ### 0x01.下载相关资源
 
 ```bash
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/rke2-images.linux-amd64.tar.zst
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/rke2.linux-amd64.tar.gz
-wget https://mirrors.2500city.com/devops/Rancher/RKE2/v1.33.4/sha256sum-amd64.txt
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/rke2-images.linux-amd64.tar.zst
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/rke2.linux-amd64.tar.gz
+wget https://github.com/rancher/rke2/releases/download/v1.33.4%2Brke2r1/sha256sum-amd64.txt
 ```
 
 :::tip

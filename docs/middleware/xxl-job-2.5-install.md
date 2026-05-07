@@ -38,7 +38,8 @@ chown -R xxljob:xxljob /var/log/xxl-job-admin
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/XXL-JOB/xxl-job-2.5.0.tar.gz
+wget https://github.com/xuxueli/xxl-job/archive/refs/tags/2.5.0.tar.gz \
+  -O xxl-job-2.5.0.tar.gz
 tar zxvf xxl-job-2.5.0.tar.gz
 mv xxl-job-2.5.0 /usr/local/xxl-job-2.5
 ```
@@ -224,4 +225,3 @@ systemctl disable xxl-job-admin #关闭开机自启服务
 ## 附录2.参考资料
 
 https://www.xuxueli.com/xxl-job/
-

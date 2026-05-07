@@ -95,8 +95,8 @@ spec:
   environment {
     KUBECONFIG_CREDENTIAL_ID = "63709dee-48c3-46ef-b7f4-4e2a0bd360da"
     REGISTRY = "10.1.0.123:3380"
-    REGISTRY_NAMESPACE = "dykunshan"
-    APP_NAME = "dykunshan-java-mini-activity"
+    REGISTRY_NAMESPACE = "demo-namespace"
+    APP_NAME = "demo-java-mini-activity"
     PROFILES_ACTIVE = "test"
   }
 
@@ -106,7 +106,7 @@ spec:
       steps {
         container('base') {
           sh 'chown 1000.1000 -R ./'
-          git(url: 'https://gitlab.chinacici.com/dykunshan-backend/java-mini-activity.git', credentialsId: 'gitlab-credential', branch: "test", changelog: true, poll: false)
+          git(url: 'https://git.example.com/demo-backend/demo-java-mini-activity.git', credentialsId: 'gitlab-credential', branch: "test", changelog: true, poll: false)
         }
       }
     }
@@ -177,4 +177,3 @@ EOF
   }
 }
 ```
-

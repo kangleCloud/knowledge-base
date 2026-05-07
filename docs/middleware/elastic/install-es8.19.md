@@ -47,7 +47,7 @@ useradd -g es es -s /sbin/nologin
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Elasticsearch/elasticsearch-8.19.9-linux-x86_64.tar.gz
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.19.9-linux-x86_64.tar.gz
 tar zxvf elasticsearch-8.19.9-linux-x86_64.tar.gz
 mv /usr/local/src/elasticsearch-8.19.9 /usr/local/elasticsearch8.19
 ```

@@ -42,7 +42,7 @@ mkdir -p /usr/local/prometheus-exporters
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/mysqld_exporter-0.18.0.linux-amd64.tar.gz
+wget https://github.com/prometheus/mysqld_exporter/releases/download/v0.18.0/mysqld_exporter-0.18.0.linux-amd64.tar.gz
 ```
 
 ```bash
@@ -234,4 +234,3 @@ systemctl restart prometheus
 
 - <https://github.com/prometheus/mysqld_exporter>
 - <https://www.cnblogs.com/wangyongqiang/p/15823372.html>
-

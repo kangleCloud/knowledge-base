@@ -12,7 +12,7 @@
 
 ### 0x01.Connections
 
-⭐推荐图表名称：`SJFY Redis: Connections`
+⭐推荐图表名称：`Redis: Connections`
 
 - Connected clients - 客户端连接数 => 超过最大连接数的80%报警 🔥
 - Rejected connections - 由于达到 maxclients 而被拒绝的连接数
@@ -22,7 +22,7 @@
 
 ### 0x01.Memory
 
-⭐推荐图表名称：`SJFY Redis: Memory`
+⭐推荐图表名称：`Redis: Memory`
 
 - Max memory - 分配给 Redis 的最大内存 => 超过物理内存的50% 🔥
 - Memory used - 内部存储的数据内存使用量
@@ -57,16 +57,16 @@
 
 ### 0x02.Keyspace
 
-⭐推荐图表名称：`SJFY Redis: Keyspace`
+⭐推荐图表名称：`Redis: Keyspace`
 
-- SJFY Redis: Keyspace hits per sec - 命中次数 ⭐
-- SJFY Redis: Keyspace misses per sec - 没命中次数 ⭐
+- Redis: Keyspace hits per sec - 命中次数 ⭐
+- Redis: Keyspace misses per sec - 没命中次数 ⭐
 
 ### 0x03.Hit Rate
 
-⭐推荐图表名称：`SJFY Redis: Hit Rate`
+⭐推荐图表名称：`Redis: Hit Rate`
 
-- SJFY Redis: Cache Hit Rate - 缓存命中率 ⭐
+- Redis: Cache Hit Rate - 缓存命中率 ⭐
 
 :::tip 计算公式
 keyspace_hits / (keyspace_hits + keyspace_misses) * 100
@@ -76,19 +76,19 @@ keyspace_hits / (keyspace_hits + keyspace_misses) * 100
 
 ### 0x01.无图形监控项
 
-- SJFY Redis: Cluster health status - 集群健康状态 => 异常报警 ⭐🔥
-- SJFY Redis: Cluster status - cluster 模式集群状态值  => 异常报警 ⭐🔥
-- SJFY Redis: Cluster num of node - 主从节点数量 => 异常报警 ⭐🔥
-- SJFY Redis: Cluster delay of replication - 主从复制延迟 => 异常报警 ⭐🔥
-- SJFY Redis: Cluster num of slave - slave数量 => 异常报警 ⭐🔥
+- Redis: Cluster health status - 集群健康状态 => 异常报警 ⭐🔥
+- Redis: Cluster status - cluster 模式集群状态值  => 异常报警 ⭐🔥
+- Redis: Cluster num of node - 主从节点数量 => 异常报警 ⭐🔥
+- Redis: Cluster delay of replication - 主从复制延迟 => 异常报警 ⭐🔥
+- Redis: Cluster num of slave - slave数量 => 异常报警 ⭐🔥
 
 ## 哨兵集群
 
 ### 0x01.无图形监控项
 
-- SJFY Redis: Sentinel running status - 哨兵集群运行状态 => 异常报警 ⭐🔥
-- SJFY Redis: Sentinel health status - 哨兵集群健康状态 => 异常报警 ⭐🔥
-- SJFY Redis: Sentinel addr of sentinel_master - 哨兵集群主节点地址 => 改变则报警 ⭐🔥
-- SJFY Redis: Sentinel num of sentinels - 哨兵集群节点数量 => 异常报警 ⭐🔥
-- SJFY Redis: Sentinel num of sentinel_master - 哨兵集群主节点数 => 异常报警 ⭐🔥
-- SJFY Redis: Sentinel num of sentinel_slave - 哨兵集群从节点数 => 异常报警 ⭐🔥
+- Redis: Sentinel running status - 哨兵集群运行状态 => 异常报警 ⭐🔥
+- Redis: Sentinel health status - 哨兵集群健康状态 => 异常报警 ⭐🔥
+- Redis: Sentinel addr of sentinel_master - 哨兵集群主节点地址 => 改变则报警 ⭐🔥
+- Redis: Sentinel num of sentinels - 哨兵集群节点数量 => 异常报警 ⭐🔥
+- Redis: Sentinel num of sentinel_master - 哨兵集群主节点数 => 异常报警 ⭐🔥
+- Redis: Sentinel num of sentinel_slave - 哨兵集群从节点数 => 异常报警 ⭐🔥

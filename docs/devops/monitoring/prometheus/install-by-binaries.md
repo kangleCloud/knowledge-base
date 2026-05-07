@@ -6,7 +6,7 @@
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/prometheus-3.8.1.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v3.8.1/prometheus-3.8.1.linux-amd64.tar.gz
 tar zxvf prometheus-3.8.1.linux-amd64.tar.gz
 mv prometheus-3.8.1.linux-amd64 /usr/local/prometheus3.8
 ```
@@ -185,4 +185,3 @@ curl -X POST 127.0.0.1:1/-/reload
 ## 附录3.参考资料
 
 - [Getting started](https://prometheus.io/docs/prometheus/latest/getting_started) | [中文](https://prometheus.ac.cn/docs/prometheus/latest/getting_started)
-

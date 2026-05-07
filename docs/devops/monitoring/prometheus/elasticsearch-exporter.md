@@ -14,7 +14,7 @@ mkdir -p /usr/local/prometheus-exporters
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/elasticsearch_exporter-1.10.0.linux-amd64.tar.gz
+wget https://github.com/prometheus-community/elasticsearch_exporter/releases/download/v1.10.0/elasticsearch_exporter-1.10.0.linux-amd64.tar.gz
 ```
 
 ```bash
@@ -201,4 +201,3 @@ systemctl restart prometheus
 - [Elasticsearch Exporter GitHub](https://github.com/prometheus-community/elasticsearch_exporter)
 - [Grafana Dashboard - Elasticsearch Overview](https://grafana.com/grafana/dashboards/14191-elasticsearch-overview/)
 - [Prometheus Community Helm Charts](https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus-elasticsearch-exporter)
-

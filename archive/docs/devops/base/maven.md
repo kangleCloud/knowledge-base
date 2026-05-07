@@ -16,7 +16,7 @@ Apache Maven是一个软件项目管理和理解工具。Maven基于项目对象
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Maven/apache-maven-3.9.12-bin.tar.gz
+wget https://archive.apache.org/dist/maven/maven-3/3.9.12/binaries/apache-maven-3.9.12-bin.tar.gz
 tar -zxvf apache-maven-3.9.12-bin.tar.gz
 cp -r /usr/local/src/apache-maven-3.9.12 /usr/local/apache-maven-3.9
 ```

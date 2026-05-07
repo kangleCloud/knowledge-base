@@ -71,7 +71,7 @@ kubectl create namespace cert-manager
 ```bash
 cd /usr/local/src
 curl -L -o cert-manager-crd-1.18.2.yaml \
-  https://mirrors.2500city.com/devops/Helm/cert-manager/v1.18.2/cert-manager.crds.yaml
+  https://github.com/cert-manager/cert-manager/releases/download/v1.18.2/cert-manager.crds.yaml
 kubectl apply -f cert-manager-crd-1.18.2.yaml
 ```
 
@@ -140,7 +140,8 @@ helm fetch rancher-stable/rancher --version=v2.12.1
 下载镜像文件到服务器
 ```bash
 cd /usr/local/src/
-wget https://mirrors.2500city.com/devops/Rancher/rancher-image-2.12.1.tar
+docker pull rancher/rancher:v2.12.1
+docker save -o /usr/local/src/rancher-image-2.12.1.tar rancher/rancher:v2.12.1
 ```
 
 导入镜像（k8s.io 是 containerd 默认用来存放 K8S 容器镜像的命名空间）
@@ -158,7 +159,8 @@ crictl images | grep rancher\/rancher
 下载镜像文件到服务器
 ```bash
 cd /usr/local/src/
-wget https://mirrors.2500city.com/devops/Rancher/rancher-shell-image-0.5.0.tar
+docker pull rancher/shell:v0.5.0
+docker save -o /usr/local/src/rancher-shell-image-0.5.0.tar rancher/shell:v0.5.0
 ```
 
 导入镜像（k8s.io 是 containerd 默认用来存放 K8S 容器镜像的命名空间）
@@ -176,7 +178,9 @@ crictl images | grep rancher\/shell
 下载镜像文件到服务器
 ```bash
 cd /usr/local/src/
-wget https://mirrors.2500city.com/devops/Rancher/rancher-webhook-image-0.8.1.tar
+docker pull rancher/rancher-webhook:v0.8.1
+docker save -o /usr/local/src/rancher-webhook-image-0.8.1.tar \
+  rancher/rancher-webhook:v0.8.1
 ```
 
 导入镜像（k8s.io 是 containerd 默认用来存放 K8S 容器镜像的命名空间）
@@ -194,7 +198,9 @@ crictl images | grep rancher\/rancher-webhook
 下载镜像文件到服务器
 ```bash
 cd /usr/local/src/
-wget https://mirrors.2500city.com/devops/Rancher/rancher-system-upgrade-controller-image-0.16.0.tar
+docker pull rancher/system-upgrade-controller:v0.16.0
+docker save -o /usr/local/src/rancher-system-upgrade-controller-image-0.16.0.tar \
+  rancher/system-upgrade-controller:v0.16.0
 ```
 
 导入镜像（k8s.io 是 containerd 默认用来存放 K8S 容器镜像的命名空间）
@@ -228,7 +234,7 @@ docker save -o /usr/local/src/rancher-shell-image-0.5.0.tar rancher/shell:v0.5.0
 --- el-tab-item webhook:v0.8.1
 ```bash
 docker pull rancher/rancher-webhook:v0.8.1
-docker save -o /usr/local/src/rancher-webhook-image-0.5.0.tar \
+docker save -o /usr/local/src/rancher-webhook-image-0.8.1.tar \
   rancher/rancher-webhook:v0.8.1
 ```
 ---

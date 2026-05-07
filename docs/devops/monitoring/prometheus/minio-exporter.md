@@ -14,7 +14,7 @@ MinIO Client（mc）用于生成 Prometheus 认证令牌。
 
 ```bash
 cd /usr/local/minio2405/bin
-wget https://mirrors.2500city.com/devops/MinIO/mc.RELEASE.2025-02-21T16-00-46Z
+wget https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2025-02-21T16-00-46Z
 mv mc.RELEASE.2025-02-21T16-00-46Z mc
 chmod +x mc
 ```

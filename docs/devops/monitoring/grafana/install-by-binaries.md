@@ -13,7 +13,8 @@ useradd -g grafana grafana -s /sbin/nologin
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Grafana/grafana_12.3.1_20271043721_linux_amd64.tar.gz
+wget https://dl.grafana.com/oss/release/grafana-12.3.1.linux-amd64.tar.gz \
+  -O grafana_12.3.1_20271043721_linux_amd64.tar.gz
 tar zxvf grafana_12.3.1_20271043721_linux_amd64.tar.gz
 mv grafana-12.3.1 /usr/local/grafana12.3
 chown -R grafana:grafana  /usr/local/grafana12.3

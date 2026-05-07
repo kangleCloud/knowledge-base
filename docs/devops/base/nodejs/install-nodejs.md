@@ -34,7 +34,8 @@ https://github.com/coreybutler/nvm-windows
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Node/nvm-0.40.3.tar.gz
+wget https://github.com/nvm-sh/nvm/archive/refs/tags/v0.40.3.tar.gz \
+  -O nvm-0.40.3.tar.gz
 tar -zxvf nvm-0.40.3.tar.gz
 mv nvm-0.40.3 /usr/local/nvm-0.40
 ```
@@ -106,8 +107,8 @@ nvm install 12.22
 ### 0x01.使用npm安装
 
 ```bash
-# 设置镜像源
-npm config set registry https://verdaccio.chinacici.com
+# 设置官方源
+npm config set registry https://registry.npmjs.org/
 # 安装
 npm install -g pnpm
 ```

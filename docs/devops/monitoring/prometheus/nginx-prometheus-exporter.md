@@ -18,7 +18,7 @@ https://github.com/nginx/nginx-prometheus-exporter/tags
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/nginx-prometheus-exporter_1.5.1_linux_amd64.tar.gz
+wget https://github.com/nginx/nginx-prometheus-exporter/releases/download/v1.5.1/nginx-prometheus-exporter_1.5.1_linux_amd64.tar.gz
 ```
 
 ```bash
@@ -198,4 +198,3 @@ Grafana 官方提供了 NGINX Prometheus Exporter 的 Dashboard，您可以通�
 
 - https://github.com/nginx/nginx-prometheus-exporter
 - https://grafana.com/grafana/dashboards/12708-nginx-prometheus-exporter/
-

@@ -13,9 +13,9 @@
 
 ### 0x01.Connections
 
-⭐推荐图表名称：`SJFY MySQL: Connections`
+⭐推荐图表名称：`MySQL: Connections`
 
-- SJFY Mysql: Max connections - 最大连接数 ⭐
+- MySQL: Max connections - 最大连接数 ⭐
 - Connections per second - 每秒连接数 => 超过200报警（实际阈值需参照具体情况） 🔥
 - Max used connections - 使用的最大连接数
 
@@ -43,14 +43,14 @@
 
 ### 0x01.InnoDB row lock time
 
-⭐推荐图表名称：`SJFY MySQL: InnoDB row lock time` 
+⭐推荐图表名称：`MySQL: InnoDB row lock time` 
 
 - InnoDB row lock time - InnoDB 行锁定时间
 - InnoDB row lock time max - InnoDB 最大行锁定时间
 
 ### 0x02.Innodb row lock waits
 
-⭐推荐图表名称：`SJFY MySQL: Innodb row lock waits` 
+⭐推荐图表名称：`MySQL: Innodb row lock waits` 
 
 - Innodb row lock waits - InnoDB表上的操作等待行锁的次数
 
@@ -71,8 +71,8 @@
 
 ### 0x01.无图形监控项
 
-- SJFY Mysql: Slave io running - I/O线程是否启动并成功连接到源 => 不等于`YES`报警 ⭐🔥
-- SJFY Mysql: Slave sql running - SQL线程是否启动 => 不等于`YES`报警 ⭐🔥
+- MySQL: Slave io running - I/O线程是否启动并成功连接到源 => 不等于`YES`报警 ⭐🔥
+- MySQL: Slave sql running - SQL线程是否启动 => 不等于`YES`报警 ⭐🔥
 
 :::warning
 为了让MySQL的主库和从库监控共享同一模板，需要将主库的从库配置关闭。

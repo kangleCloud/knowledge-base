@@ -14,7 +14,7 @@ https://prometheus.io/download/#node_exporter
 
 ```bash
 cd /usr/local/src
-wget https://mirrors.2500city.com/devops/Prometheus/exporters/node_exporter-1.10.2.linux-amd64.tar.gz
+wget https://github.com/prometheus/node_exporter/releases/download/v1.10.2/node_exporter-1.10.2.linux-amd64.tar.gz
 ```
 
 ```bash
@@ -196,4 +196,3 @@ systemctl restart prometheus
 
 - [Exporters and integrations](https://prometheus.io/docs/instrumenting/exporters/)
 - [Monitoring Linux host metrics with the Node Exporter](https://prometheus.io/docs/guides/node-exporter/) | [中文](https://prometheus.ac.cn/docs/guides/node-exporter/)
-
