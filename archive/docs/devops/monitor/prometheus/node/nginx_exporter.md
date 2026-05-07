@@ -4,8 +4,8 @@
 
 ```bash
 ps -ef | grep nginx_exporter
-mkdir -p /usr/local/exporter/nginx-prometheus-exporter1.5
 cd /usr/local/exporter
+mkdir -p /usr/local/exporter/nginx-prometheus-exporter1.5
 tar -zxvf nginx-prometheus-exporter_1.5.1_linux_amd64.tar.gz -C /usr/local/exporter/nginx-prometheus-exporter1.5
 rm -rf nginx-prometheus-exporter_1.5.1_linux_amd64.tar.gz
 ```
@@ -13,8 +13,11 @@ rm -rf nginx-prometheus-exporter_1.5.1_linux_amd64.tar.gz
 ## 配置nginx_exporter为系统服务
 
 ```bash
-vim /etc/systemd/system/nginx-prometheus-exporter.service
+netstat -tulnp | grep 9115
+```
 
+```bash
+vim /etc/systemd/system/nginx-prometheus-exporter.service
 ```
 
 ```ini
@@ -25,7 +28,7 @@ After=network.target
 [Service]
 Type=simple
 ExecStart=/usr/local/exporter/nginx-prometheus-exporter1.5/nginx-prometheus-exporter \
-  --web.listen-address=:9113 \
+  --web.listen-address=:9115 \
   --nginx.scrape-uri=http://127.0.0.1/nginx_status
 Restart=always
 

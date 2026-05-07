@@ -14,6 +14,10 @@ rm -rf node_exporter-1.10.2.linux-amd64.tar.gz
 ## 配置node_exporter为系统服务
 
 ```bash
+netstat -tulnp | grep 8100
+```
+
+```bash
 vim /etc/systemd/system/node_exporter.service
 ```
 
