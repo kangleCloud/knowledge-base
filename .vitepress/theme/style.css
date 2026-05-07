@@ -470,3 +470,249 @@
 .VPHome {
   padding-bottom: 80px !important;
 }
+
+.VPHome {
+  --vp-home-hero-image-filter: blur(24px);
+  padding-bottom: 104px !important;
+}
+
+@media (min-width: 640px) {
+  .VPHome {
+    --vp-home-hero-image-filter: blur(32px);
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome {
+    --vp-home-hero-image-filter: blur(44px);
+  }
+}
+
+.VPHome .VPHero {
+  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 32px)
+    24px 24px;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero {
+    padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px)
+      40px 28px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero {
+    padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 56px)
+      56px 32px;
+  }
+}
+
+.VPHome .VPHero .container,
+.VPHome .VPFeatures .container {
+  max-width: 1200px;
+}
+
+.VPHome .VPHero .container {
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .container {
+    gap: 48px;
+  }
+
+  .VPHome .VPHero.has-image .main {
+    max-width: 560px;
+  }
+}
+
+.VPHome .VPHero .heading {
+  gap: 10px;
+}
+
+.VPHome .VPHero .name {
+  max-width: none;
+  line-height: 1.08;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+}
+
+.VPHome .VPHero .text {
+  max-width: 620px;
+  line-height: 1.08;
+  font-size: 42px;
+  letter-spacing: -0.05em;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .name {
+    font-size: 36px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .name {
+    font-size: 40px;
+  }
+
+  .VPHome .VPHero .text {
+    font-size: 56px;
+  }
+}
+
+.VPHome .VPHero .tagline {
+  max-width: 560px;
+  padding-top: 6px;
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .tagline {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .tagline {
+    max-width: 600px;
+    font-size: 18px;
+  }
+}
+
+.VPHome .VPHero .actions {
+  padding-top: 22px;
+}
+
+.VPHome .VPHero .image {
+  margin: -20px -12px 0;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .image {
+    margin: -40px 0 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .image {
+    margin: 0;
+  }
+}
+
+.VPHome .VPHero .image-bg {
+  width: 168px;
+  height: 168px;
+  opacity: 0.88;
+}
+
+.VPHome .VPHero .image-src {
+  max-width: 168px;
+  max-height: 168px;
+}
+
+@media (min-width: 640px) {
+  .VPHome .VPHero .image-bg {
+    width: 220px;
+    height: 220px;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 220px;
+    max-height: 220px;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPHero .image-container {
+    transform: translate(-8px, -8px);
+  }
+
+  .VPHome .VPHero .image-bg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .VPHome .VPHero .image-src {
+    max-width: 280px;
+    max-height: 280px;
+  }
+}
+
+.VPHome .VPFeatures {
+  padding-top: 18px;
+}
+
+.VPHome .VPFeatures .items {
+  margin: -10px;
+}
+
+.VPHome .VPFeatures .item {
+  padding: 10px;
+}
+
+.VPHome .VPFeatures .VPFeature {
+  border-radius: 18px;
+}
+
+.VPHome .VPFeatures .box {
+  padding: 22px 22px 24px;
+}
+
+.VPHome .VPFeatures .title {
+  font-size: 18px;
+}
+
+.VPHome .VPFeatures .details {
+  padding-top: 10px;
+  line-height: 1.75;
+}
+
+@media (min-width: 960px) {
+  .VPHome .VPFeatures .item.grid-4:nth-child(-n + 3) {
+    width: calc(100% / 3);
+  }
+
+  .VPHome .VPFeatures .item.grid-4:nth-child(n + 4) {
+    width: 50%;
+  }
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  text-align: center;
+}
+
+.VPFooter .site-record,
+.VPFooter .beian-record {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 8px;
+  flex-wrap: wrap;
+}
+
+.VPFooter .message a,
+.VPFooter .copyright a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.VPFooter .message a:hover,
+.VPFooter .copyright a:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.VPFooter .beian-record img {
+  flex: 0 0 auto;
+  height: 1em;
+  width: auto;
+}
