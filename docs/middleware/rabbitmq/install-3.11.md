@@ -30,7 +30,7 @@ yum -y install socat ncurses-compat-libs
 
 虽然在安装过程中使用了 **erlang-27.2.1-1**，且未发现任何问题，但仍应遵循官方要求，按照推荐版本进行安装。
 
-更详细的说明，请查看<a target="_blank" href="/middleware/rabbitmq/introduction.html#_2-erlang">RabbitMQ介绍</a>
+更详细的说明，请查看<a target="_blank" href="/docs/middleware/rabbitmq/introduction.html#_2-erlang">RabbitMQ介绍</a>
 :::
 
 ### 0x01.安装 RPM 包
@@ -247,7 +247,7 @@ https://www.rabbitmq.com/docs/access-control#loopback-users
 
 ## 八、安装延迟队列插件
 
-具体安装方法可参考<a href="/middleware/rabbitmq/delayed-message-plugin.html" target="_blank">RabbitMQ延迟队列插件安装</a>。
+具体安装方法可参考<a href="/docs/middleware/rabbitmq/delayed-message-plugin.html" target="_blank">RabbitMQ延迟队列插件安装</a>。
 
 ## 九、常见错误
 
@@ -268,7 +268,7 @@ yum -y install ncurses-compat-libs
 :::warning
 Starting with Erlang 24, the minimum required version is an equivalent of OpenSSL is 1.1. <a href="https://github.com/rabbitmq/erlang-rpm/tree/v24.3.4.11#what-about-centos-7-and-derivatives" target="_blank">What about CentOS 7 and derivatives?</a> 
 
-如需升级OpenSSL，可参考<a href="/devops/baseops/server-os/upgrade-openssl.html#一、升级openssl到1-1-1" target="_blank">升级OpenSSL到1.1.1*</a>
+如需升级OpenSSL，可参考<a href="/docs/devops/base/server-os/upgrade-openssl.html#一、升级openssl到1-1-1" target="_blank">升级OpenSSL到1.1.1*</a>
 :::
 
 ### 0x01.安装 RPM 包

@@ -113,7 +113,7 @@ showmount -e 192.210.19.205
 
 ```bash
 mkdir -p /data/resource
-sudo mount -t nfs 192.210.19.205:/data/share /data/resource -o nolock,nfsvers=3,vers=3
+sudo mount -t nfs 192.210.19.205:/data/share /nfs -o nolock,nfsvers=3,vers=3
 ```
 
 > [!TIP]
@@ -122,7 +122,7 @@ sudo mount -t nfs 192.210.19.205:/data/share /data/resource -o nolock,nfsvers=3,
 
 ```bash
 # 解除挂载
-umount /data/resource
+umount /nfs
 ```
 
 
@@ -132,7 +132,7 @@ umount /data/resource
 ```bash
 vim /etc/rc.d/rc.local
 #在文件最后添加一行：
-mount -t nfs 192.168.11.34:/data/share /mnt/share/ -o nolock,nfsvers=3,vers=3
+mount -t nfs 192.168.11.34:/nfs /mnt/share/ -o nolock,nfsvers=3,vers=3
 ```
 
 >[!TIP]

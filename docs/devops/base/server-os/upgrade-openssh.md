@@ -12,8 +12,8 @@
 - openEuler release 24.03 (LTS-SP1) - OpenSSH_9.6p1, OpenSSL 3.0.12 24 Oct 2023
   :::
 
-截止2025年08月02日，OpenSSH 最新稳定版为 openssh-10.0p2.tar.gz，<font color="red">
-每次安装需到官网或镜像站下载最新版。</font>
+本文示例版本固定使用 openssh-10.3p1.tar.gz，<font color="red">
+如需调整版本，请到官网或镜像站确认对应源码包。</font>
 
 ## 1.开启telnet
 
@@ -65,7 +65,7 @@ yum -y install gcc gcc-c++ glibc \
 ### 0x02.升级OpenSSL
 
 所有运行 OpenSSL 1.1.1.*
-版本的系统都需升级至该系列的最新版本，以获取最新的安全补丁和功能更新。具体升级方法请参考<a href="/devops/baseops/server-os/upgrade-openssl.html" target="_blank">
+版本的系统都需升级至该系列的最新版本，以获取最新的安全补丁和功能更新。具体升级方法请参考<a href="/docs/devops/base/server-os/upgrade-openssl.html" target="_blank">
 升级 OpenSSL</a>。
 
 ## 3.编译安装
@@ -81,8 +81,8 @@ mv /etc/pam.d/sshd /etc/pam.d/sshd.bak_$(date "+%Y%m%d")
 
 ```shell
 cd /usr/local/src
-wget https://mirrors.aliyun.com/pub/OpenBSD/OpenSSH/portable/openssh-10.0p2.tar.gz
-tar -zxvf openssh-10.0p2.tar.gz
+wget https://mirrors.aliyun.com/pub/OpenBSD/OpenSSH/portable/openssh-10.3p1.tar.gz
+tar -zxvf openssh-10.3p1.tar.gz
 ```
 
 ### 0x03.编译安装
@@ -96,8 +96,8 @@ OpenSSL 的安装路径因服务器环境而异（要求 OpenSSL 版本不低于
 采用`--without-openssl-header-check`选项来跳过 OpenSSL 头文件检测，尚未发现更优的替代方案。
 
 ```bash
-cd /usr/local/src/openssh-10.0p1
-./configure --prefix=/usr/local/openssh10.0 \
+cd /usr/local/src/openssh-10.3p1
+./configure --prefix=/usr/local/openssh10.3 \
     --sysconfdir=/etc/ssh \
     --with-ssl-dir=/usr/local/openssl1.1 \
     --with-zlib --with-pam \
@@ -110,8 +110,8 @@ make && make install
 === 未编译升级OpenSSL
 
 ```bash
-cd /usr/local/src/openssh-10.0p1
-./configure --prefix=/usr/local/openssh10.0 \
+cd /usr/local/src/openssh-10.3p1
+./configure --prefix=/usr/local/openssh10.3 \
     --sysconfdir=/etc/ssh \
     --with-zlib --with-pam
 make && make install
@@ -146,9 +146,9 @@ mv /usr/bin/ssh-keygen /usr/bin/ssh-keygen.bak_$(date "+%Y%m%d")
 ### 0x06.配置新版本执行文件
 
 ```bash
-ln -s /usr/local/openssh10.0/bin/ssh /usr/bin/ssh
-ln -s /usr/local/openssh10.0/bin/ssh-keygen /usr/bin/ssh-keygen 
-ln -s /usr/local/openssh10.0/sbin/sshd /usr/sbin/sshd
+ln -s /usr/local/openssh10.3/bin/ssh /usr/bin/ssh
+ln -s /usr/local/openssh10.3/bin/ssh-keygen /usr/bin/ssh-keygen
+ln -s /usr/local/openssh10.3/sbin/sshd /usr/sbin/sshd
 ```
 
 ## 4.使用SysV运行
@@ -165,11 +165,11 @@ mv /usr/lib/systemd/system/sshd.service \
 ### 0x02.配置新版本启动脚本
 
 ```bash
-\cp -f /usr/local/src/openssh-10.0p1/contrib/redhat/sshd.init /etc/init.d/sshd
+\cp -f /usr/local/src/openssh-10.3p1/contrib/redhat/sshd.init /etc/init.d/sshd
 ```
 
 ```bash
-\cp -f /usr/local/src/openssh-10.0p1/contrib/redhat/sshd.pam /etc/pam.d/sshd
+\cp -f /usr/local/src/openssh-10.3p1/contrib/redhat/sshd.pam /etc/pam.d/sshd
 ```
 
 ```bash
@@ -237,7 +237,7 @@ ssh -V
 ```
 
 :::tip 输出如下内容
-OpenSSH_10.0p2, OpenSSL 1.1.1m 14 Dec 2021
+OpenSSH_10.3p1, OpenSSL 1.1.1m 14 Dec 2021
 :::
 
 ### 0x04.关闭Telnet
@@ -256,5 +256,4 @@ systemctl disable telnet.socket
 
 - https://developer.aliyun.com/article/1647604
 - https://blog.csdn.net/qq_51920683/article/details/146235938
-
 

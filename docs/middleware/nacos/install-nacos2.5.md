@@ -14,8 +14,8 @@ Nacos Server 发布历史：https://nacos.io/download/release-history
 ## 一、环境准备
 
 - 至少在2C4G 60G的机器配置下运行。
-- 如未安装 Java 运行环境，可参照<a href="/devops/baseops/java/install-jdk.html" target="_blank">安装JDK8</a>。
-- 如需安装 Mysql，可参照<a href="/database/mysql/install-mysql8.0.html" target="_blank">安装Mysql8.0</a>。
+- 如未安装 Java 运行环境，可参照<a href="/docs/devops/base/java/install-jdk.html" target="_blank">安装JDK8</a>。
+- 如需安装 Mysql，可参照<a href="/docs/database/mysql/install-mysql8.0.html" target="_blank">安装Mysql8.0</a>。
 
 ## 二、使用二进制包安装
 

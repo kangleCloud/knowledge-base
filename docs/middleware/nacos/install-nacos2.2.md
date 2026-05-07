@@ -19,9 +19,9 @@ Nacos Server 发布历史：https://nacos.io/download/release-history
 
 - 服务器至少2C4G
 
-- 如未安装 Java 运行环境，可参照<a href="/devops/java/install-jdk.html#基于tar-gz包安装jdk8" target="_blank">安装JDK8</a>
+- 如未安装 Java 运行环境，可参照<a href="/docs/devops/java/install-jdk.html#基于tar-gz包安装jdk8" target="_blank">安装JDK8</a>
 
-- 如需安装 Mysql，可参照<a href="/database/mysql/install-mysql8.0.html" target="_blank">安装Mysql8.0</a>
+- 如需安装 Mysql，可参照<a href="/docs/database/mysql/install-mysql8.0.html" target="_blank">安装Mysql8.0</a>
 
 ## 二、使用二进制包安装
 

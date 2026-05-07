@@ -132,7 +132,7 @@ exit
 docker tag 原镜像名称 新镜像名称
 docker inspect [容器id或容器名]
 # docker登录
-docker login -uadmin -pHarbor12345 192.168.3.12:6007
+docker login -u admin -p '<PASSWORD>' 192.168.3.12:6007
 # docker退出
 docker logout 192.168.3.12:6007
 ```

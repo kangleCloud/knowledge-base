@@ -474,7 +474,7 @@ curl -u elastic:'<password>' -X GET "localhost:9200/_cat/nodes?v"
 
 ## 七、安装分词插件
 
-在每个节点上安装 Analysis-IK 分词插件，参考 <a href="/middleware/elastic/install-es-analysis-ik.html" target="_blank">Analysis-IK分词插件</a>
+在每个节点上安装 Analysis-IK 分词插件，参考 <a href="/docs/middleware/elastic/install-es-analysis-ik.md" target="_blank">Analysis-IK 分词插件</a>
 
 ## 附件一、节点说明
 

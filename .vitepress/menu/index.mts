@@ -1,36 +1,23 @@
-// import your menu.js
-
-// 运维
-import devopsMenu from "./devops/base"
-import CICDMenu  from "./devops/cicd";
-import ContainerMenu from "./devops/container"
-import MonitorMenu from "./devops/monitor"
-
-// 中间件
-import middlewareMenu from "./middleware/middleware"
-
-// 后端
-import JavaMenu from "./backend/java"
-
-// database
-import DatabaseMenu from "./database/database"
-
+import backendMenu from "./backend/backend";
+import databaseMenu from "./database/database";
+import devopsBaseMenu from "./devops/base";
+import devopsCicdMenu from "./devops/cicd";
+import devopsContainerMenu from "./devops/container";
+import devopsMonitoringMenu from "./devops/monitoring";
+import middlewareMenu from "./middleware/middleware";
+import troubleshootingMenu from "./troubleshooting/troubleshooting";
 
 const createSidebar = () => {
   return {
-    // devops
-    '/docs/devops/base/': devopsMenu,
-    '/docs/devops/container/': ContainerMenu,
-    '/docs/devops/cicd/': CICDMenu,
-    '/docs/devops/monitor/': MonitorMenu,
-    // middleware
-    '/docs/middleware/': middlewareMenu,
-    // 后端
-    '/docs/backend/java/': JavaMenu,
+    "/docs/backend/": backendMenu,
+    "/docs/database/": databaseMenu,
+    "/docs/devops/base/": devopsBaseMenu,
+    "/docs/devops/cicd/": devopsCicdMenu,
+    "/docs/devops/container/": devopsContainerMenu,
+    "/docs/devops/monitoring/": devopsMonitoringMenu,
+    "/docs/middleware/": middlewareMenu,
+    "/docs/troubleshooting/": troubleshootingMenu,
+  };
+};
 
-    // database
-    '/docs/database/': DatabaseMenu,
-
-  }
-}
-export default createSidebar
+export default createSidebar;

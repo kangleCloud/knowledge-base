@@ -286,7 +286,7 @@ curl -u elastic:'<password>' 127.0.0.1:9200/_cat/health
 
 ## 五、安装Analysis-IK分词插件
 
-详见：<a href="/middleware/elastic/install-es-analysis-ik.html" target="_blank">Analysis-IK分词插件</a>
+详见：<a href="/docs/middleware/elastic/install-es-analysis-ik.md" target="_blank">Analysis-IK 分词插件</a>
 
 ## 附件一、常用命令
 

@@ -12,7 +12,7 @@
 
 ## 1.准备工作
 
-准备三台主机，主机名参考<a href="/devops/baseops/memo.html#三、服务器标识命名约定" target="_blank">服务器标识命名约定</a>配置。
+准备三台主机，并按统一的服务器标识命名规范配置主机名。
 
 | IP | 主机名(HOSTNAME) | 物理节点 | 主从节点端口
 | -- | -- | -- | --
@@ -20,7 +20,7 @@
 | 10.1.0.42 | Middleware-1-42 | 物理节点二 | 主节点端口：6380；从节点端口：6381
 | 10.1.0.43 | Middleware-1-43 | 物理节点三 | 主节点端口：6380；从节点端口：6381
 
-参照<a href="/docs/middleware/redis/install-redis.html" target="_blank">Redis单节点部署</a>分别在各物理节点上安装 Redis 服务。
+参照<a href="/docs/middleware/redis/install-redis7.0.md" target="_blank">Redis 7.0 单节点部署</a>分别在各物理节点上安装 Redis 服务。
 
 ## 2.三个主节点构建
 

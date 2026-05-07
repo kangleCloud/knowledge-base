@@ -7,8 +7,9 @@ import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   ignoreDeadLinks: true,
-  title: "一只小小康",
-  description: "Learn Documents",
+  srcExclude: ["archive/**"],
+  title: "技术知识库",
+  description: "Backend / Database / Middleware / DevOps / Troubleshooting",
   lang: 'zh-CN',
   lastUpdated: true,
 
@@ -69,7 +70,7 @@ export default defineConfig({
 
     outline: 'deep',
     outlineTitle: '文章目录',
-    logo: "/logo.png",
+    logo: "/static/logo.png",
 
     editLink: {
       pattern: '',
@@ -110,8 +111,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "一只小小康 © 2025-present｜苏ICP备2025189524号-1",
-      copyright: "<span style=\"display: inline-flex; align-items: center; gap: 4px;\"><img src=\"/static/beian.png\" alt=\"beian\" style=\"height: 1em; margin: 0; vertical-align: middle;\" /><a href=\"https://beian.mps.gov.cn/#/query/webSearch?code=32050802012240\" rel=\"noreferrer\" target=\"_blank\" style=\"margin: 0; text-decoration: none;\">苏公网安备32050802012240号</a></span>",
+      message: "<span class=\"site-record\">一只小小康 © 2025-present｜<a href=\"https://beian.miit.gov.cn/\" rel=\"noreferrer\" target=\"_blank\">苏ICP备2025189524号-1</a></span>",
+      copyright: "<span class=\"beian-record\"><img src=\"/static/beian.png\" alt=\"beian\" /><a href=\"https://beian.mps.gov.cn/#/query/webSearch?code=32050802012240\" rel=\"noreferrer\" target=\"_blank\">苏公网安备32050802012240号</a></span>",
     },
   },
 

@@ -1,31 +1,30 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  image: 
+  image:
     src: /static/logo.png
-    alt: '图片'
-  name: "开发｜运维｜知识库"
-  text: "牛马的摆烂人生"
-  tagline: "开启摆烂生涯"
+    alt: 技术知识库
+  name: "技术知识库"
+  text: "可执行的工程文档与排障手册"
+  tagline: "Backend · Database · Middleware · DevOps · Troubleshooting"
   actions:
     - theme: brand
-      text: 开始学习
-      link: "https://github.com/"
-    # - theme: alt
-    #   text: 查看版本更新
-    #   link: /detail
+      text: 浏览文档
+      link: /docs/backend/
+    - theme: alt
+      text: 查看排障
+      link: /docs/troubleshooting/
 
 features:
-  - title: 前端
-    icon: ''
-    details: 工作接触前端技术栈有HTML、CSS、JS、Vue2、Vue3、Uniapp、微信小程序、webSocket（等等）
-  - title: 后端
-    icon: ''
-    details: 熟悉后端，技术栈有Java、Spring、SpringBoot、SpringCloud、MyBatis、MyBatis-Plus、Mysql、SqlServer、Redis、RabbitMQ（等等）
-  - title: 牛马
-    icon: '' 
-    details: 做程序员这一行，不管怎么学，始终是牛马，咳咳，说归说，生活还要继续，知识还要学习，往后一直更新相关知识文档，如前后端开发小技巧，组件库封装，欢迎大家一起收藏学习
-    # link: /detial
+  - title: Backend
+    details: 收敛 Java 基础、框架、组件接入与后端实践。
+  - title: Database
+    details: 覆盖安装部署、集群、规范、备份恢复与运维。
+  - title: Middleware
+    details: 覆盖 Redis、RabbitMQ、Elastic、Nacos、MinIO、RocketMQ。
+  - title: DevOps
+    details: 覆盖主机、容器、CI/CD、监控告警与日常运维。
+  - title: Troubleshooting
+    details: 收敛生产排障、恢复验证、回滚策略与典型案例。
 ---

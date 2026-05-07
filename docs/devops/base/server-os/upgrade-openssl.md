@@ -80,7 +80,7 @@ OpenSSL 1.1.1w  11 Sep 2023 (Library: OpenSSL 1.1.1m  14 Dec 2021)
 <b><font color="red">升级需谨慎，目前暂无实际场景需要进行 v3 版本的升级。</font></b>
 
 :::warning
-zabbix5.4 的 proxy 不支持 OpenSSL v3
+部分旧版运维组件不支持 OpenSSL v3，升级前必须逐项确认依赖兼容性。
 :::
 
 截止2023年5月，最新稳定版为：v3.0.8

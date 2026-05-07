@@ -229,7 +229,7 @@ export KUBECONFIG=/etc/kubernetes/admin.conf
 ```bash
 kubeadm join
 # 这个是你执行kubeadm init --config=kubeadm-config.yaml具体输出的
-kubeadm join 192.168.6.239:6443 --token abcdef.0123456789abcdef \
+kubeadm join <CONTROL_PLANE_IP>:6443 --token <TOKEN> \
 	--discovery-token-ca-cert-hash sha256:26454712fa078251fe8660de9a9ceec80d195ec9242b0aaadce966eec7022ff4 
 ```
 

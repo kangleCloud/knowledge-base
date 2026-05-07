@@ -12,7 +12,7 @@
 
 ## 1.准备工作
 
-准备三台主机，主机名参考<a href="/devops/baseops/memo.html#三、服务器标识命名约定" target="_blank">服务器标识命名约定</a>配置。
+准备三台主机，并按统一的服务器标识命名规范配置主机名。
 
 | IP | 主机名(HOSTNAME) | 节点 | 备注
 | -- | -- | -- | --
@@ -28,7 +28,7 @@ hostnamectl set-hostname $HOSTNAME
 systemctl restart systemd-hostnamed
 ```
 
-参照<a href="/middleware/rabbitmq/install-3.11.html" target="_blank">单节点RabbitMQ3.11安装文档</a>分别在各节点上安装 RabbitMQ 服务。需要注意的是，在后续配置镜像集群时，会清除节点的所有数据和配置。因此，在初始安装阶段，<font color="red">请勿创建任何管理员账户</font>，待集群配置完成后再进行相关用户管理操作。
+参照<a href="/docs/middleware/rabbitmq/install-3.11.html" target="_blank">单节点RabbitMQ3.11安装文档</a>分别在各节点上安装 RabbitMQ 服务。需要注意的是，在后续配置镜像集群时，会清除节点的所有数据和配置。因此，在初始安装阶段，<font color="red">请勿创建任何管理员账户</font>，待集群配置完成后再进行相关用户管理操作。
 
 ## 2.Hostname Resolution
 
