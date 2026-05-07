@@ -129,9 +129,9 @@ if [[ $METHOD == "deploy" ]]; then
     while [ $i -le 6 ]
     do
       case ${MODULE_NAME} in
-        "sjfy-app") json=`curl  -s http://${server}:9901/api/probe || echo "0"`;;
-        "sjfy-admin") json=`curl  -s http://${server}:9902/admin/api/probe || echo "0"`;;
-        "sjfy-consumer") json="success";;
+        "demo-app") json=`curl  -s http://${server}:9901/api/probe || echo "0"`;;
+        "demo-admin") json=`curl  -s http://${server}:9902/admin/api/probe || echo "0"`;;
+        "demo-consumer") json="success";;
       esac
       if [ $json == "success" ]; then
         echo "${server}\'s ${MODULE_NAME} 重启完成.";break
@@ -163,9 +163,9 @@ elif [[ $METHOD == "rollback" ]]; then
   while [ $i -le 6 ]
   do
     case ${MODULE_NAME} in
-      "sjfy-app") json=`curl  -s http://${server}:9901/api/probe || echo "0"`;;
-      "sjfy-admin") json=`curl  -s http://${server}:9902/admin/api/probe || echo "0"`;;
-      "sjfy-consumer") json="success";;
+      "demo-app") json=`curl  -s http://${server}:9901/api/probe || echo "0"`;;
+      "demo-admin") json=`curl  -s http://${server}:9902/admin/api/probe || echo "0"`;;
+      "demo-consumer") json="success";;
     esac
     if [ $json == "success" ]; then
       echo "${server}\'s ${MODULE_NAME} 回滚完成.";break

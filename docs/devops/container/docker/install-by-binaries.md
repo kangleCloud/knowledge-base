@@ -58,11 +58,9 @@ vim /etc/docker/daemon.json
 添加以下内容
 ::: el-tabs
 --- el-tab-item 非办公局域网
-本地HOST：58.210.111.196 registry.chinacici.com
 ```json
 {
   "registry-mirrors": [
-    "https://registry.chinacici.com",
     "https://docker.actima.top",
     "https://docker.m.daocloud.io",
     "https://docker.aityp.com",

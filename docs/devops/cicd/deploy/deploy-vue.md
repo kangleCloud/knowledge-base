@@ -102,7 +102,7 @@ fi
 
 执行方法：python3 /data/jenkins/scripts/refresh_qiniu.py `需刷新的文件路径或目录路径`。
 
-例子：`python3 /data/jenkins/scripts/refresh_cdn.py https://szd-life-activity-fs-cdn.2500city.com/activity/${MODULE_NAME}/`
+例子：`python3 /data/jenkins/scripts/refresh_cdn.py https://demo-activity-cdn.example.com/activity/${MODULE_NAME}/`
 
 ```shell
 # -*- coding: utf-8 -*-

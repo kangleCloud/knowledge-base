@@ -106,8 +106,8 @@ nvm install 12.22
 ### 0x01.使用npm安装
 
 ```bash
-# 设置镜像源
-npm config set registry https://verdaccio.chinacici.com
+# 设置官方源
+npm config set registry https://registry.npmjs.org/
 # 安装
 npm install -g pnpm
 ```

@@ -26,9 +26,9 @@
 ## Java 应用程序示例
 
 ```vim
-[program:szd-java-life_sjfy-app]
-command=/usr/local/jdk8/bin/java -jar -Xms512m -Xmx512m -Dserver.port=9901 -Dspring.profiles.active=prod /data/content/szd-java-life/sjfy-app/sjfy-app.jar
-directory=/data/content/szd-java-life/sjfy-app/
+[program:demo-java-life_demo-app]
+command=/usr/local/jdk8/bin/java -jar -Xms512m -Xmx512m -Dserver.port=9901 -Dspring.profiles.active=prod /data/content/demo-java-life/demo-app/demo-app.jar
+directory=/data/content/demo-java-life/demo-app/
 autostart=true
 startsecs=10
 autorestart=unexpected
@@ -36,7 +36,7 @@ user=nginx
 edirect_stderr=true
 stdout_logfile_maxbytes=1024MB
 stdout_logfile_backups=7
-stdout_logfile=/data/logs/szd-java-life-sjfy-app.log
+stdout_logfile=/data/logs/demo-java-life-demo-app.log
 ```
 
 需要注意修改`program`名称、`command`需要执行的命令、`directory`工作目录以及`stdout_logfile`日志输出位置。
@@ -51,8 +51,8 @@ stdout_logfile=/data/logs/szd-java-life-sjfy-app.log
 ## Shell 脚本示例
 
 ```vim
-[program:gusuxing_php-admin_AdminOaMessageTask]
-command=sh /data/content/gusuxing-PHP-admin/bin/admin_oa_message_task.sh start
+[program:demo-php-admin_AdminOaMessageTask]
+command=sh /data/content/demo-php-admin/bin/admin_oa_message_task.sh start
 environment=YII_ENV=test
 autostart=true
 startsecs=10

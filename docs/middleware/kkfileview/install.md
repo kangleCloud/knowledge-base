@@ -1,8 +1,7 @@
 # kkFileView安装
 
 ## 一、上传服务器部署运行
-1. 上传kkFileView-4.4.0-SNAPSHOT.tar.gz到部署目录
-[下载地址](https://filebrowser.chinacici.com/api/public/dl/tKokTWn5/devops/software/kkFileView/kkFileView-4.4.0-beta.tar.gz)
+1. 从[版本发布记录](https://file.kkview.cn/record)或[官方部署指南](https://kkview.cn/zh-cn/docs/production.html)下载对应发行包，并上传到部署目录
 
 2. 解压: tar -zxvf kkFileView-4.4.0-SNAPSHOT.tar.gz
 
@@ -45,7 +44,6 @@ window.open('http://127.0.0.1:8012/onlinePreview?url='+encodeURIComponent(Base64
 - [官网地址](https://kkfileview.keking.cn/zh-cn/index.html)
 - [码云- gitee](https://gitee.com/kekingcn/file-online-preview)
 - [部署指南](https://kkview.cn/zh-cn/docs/production.html)
-
 
 
 
