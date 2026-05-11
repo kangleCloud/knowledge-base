@@ -14,7 +14,7 @@ export default defineConfig({
   lastUpdated: true,
 
   head: [
-    ["link", { rel: "icon", href: "/static/favicon.ico" }],
+    ["link", { rel: "icon", href: "/static/kb-favicon.ico" }],
     [
       'meta',
       {
@@ -70,7 +70,11 @@ export default defineConfig({
 
     outline: 'deep',
     outlineTitle: '文章目录',
-    logo: "/static/logo.png",
+    logo: {
+      light: "/static/kb-logo-light.svg",
+      dark: "/static/kb-logo-dark.svg",
+      alt: "技术知识库",
+    },
 
     editLink: {
       pattern: '',

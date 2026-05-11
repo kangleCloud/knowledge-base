@@ -3,7 +3,8 @@ layout: home
 
 hero:
   image:
-    src: /static/logo.png
+    light: /static/kb-logo-light.svg
+    dark: /static/kb-logo-dark.svg
     alt: 技术知识库
   name: "技术知识库"
   text: "可执行的工程文档与排障手册"

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="kb-dark-back" x1="20" y1="92" x2="70" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#243DAB"/>
+      <stop offset="1" stop-color="#6C85FF"/>
+    </linearGradient>
+    <linearGradient id="kb-dark-mid" x1="40" y1="88" x2="92" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1854D1"/>
+      <stop offset="1" stop-color="#48A4FF"/>
+    </linearGradient>
+    <linearGradient id="kb-dark-front" x1="62" y1="84" x2="110" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D99E4"/>
+      <stop offset="1" stop-color="#6FE2FF"/>
+    </linearGradient>
+    <clipPath id="kb-dark-front-clip">
+      <rect x="63" y="22" width="38" height="58" rx="9" transform="rotate(-35 82 51)"/>
+    </clipPath>
+  </defs>
+
+  <rect
+    x="20"
+    y="36"
+    width="38"
+    height="58"
+    rx="9"
+    transform="rotate(-35 39 65)"
+    fill="url(#kb-dark-back)"
+  />
+  <rect
+    x="40"
+    y="27"
+    width="40"
+    height="60"
+    rx="9"
+    transform="rotate(-35 60 57)"
+    fill="url(#kb-dark-mid)"
+  />
+  <g transform="rotate(-35 82 51)">
+    <rect x="63" y="22" width="38" height="58" rx="9" fill="url(#kb-dark-front)"/>
+    <g clip-path="url(#kb-dark-front-clip)">
+      <path d="M72 33H92" stroke="#E9F7FF" stroke-linecap="round" stroke-opacity="0.88" stroke-width="3"/>
+      <path d="M72 40H89" stroke="#E9F7FF" stroke-linecap="round" stroke-opacity="0.72" stroke-width="3"/>
+      <path d="M72 47H84" stroke="#E9F7FF" stroke-linecap="round" stroke-opacity="0.58" stroke-width="3"/>
+      <path d="M72 57H81V65H92" stroke="#E9F7FF" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.76" stroke-width="3"/>
+      <circle cx="72" cy="57" r="2.8" fill="#E9F7FF"/>
+      <circle cx="81" cy="65" r="3.5" fill="#FFC145"/>
+      <circle cx="92" cy="65" r="2.6" fill="#E9F7FF"/>
+    </g>
+  </g>
+</svg>

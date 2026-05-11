@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="kb-light-back" x1="20" y1="92" x2="70" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D3E9E"/>
+      <stop offset="1" stop-color="#476CE0"/>
+    </linearGradient>
+    <linearGradient id="kb-light-mid" x1="40" y1="88" x2="92" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F5DC2"/>
+      <stop offset="1" stop-color="#2D8EF2"/>
+    </linearGradient>
+    <linearGradient id="kb-light-front" x1="62" y1="84" x2="110" y2="22" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C8BCC"/>
+      <stop offset="1" stop-color="#35C0F5"/>
+    </linearGradient>
+    <clipPath id="kb-light-front-clip">
+      <rect x="63" y="22" width="38" height="58" rx="9" transform="rotate(-35 82 51)"/>
+    </clipPath>
+  </defs>
+
+  <rect
+    x="20"
+    y="36"
+    width="38"
+    height="58"
+    rx="9"
+    transform="rotate(-35 39 65)"
+    fill="url(#kb-light-back)"
+    stroke="#082B56"
+    stroke-opacity="0.08"
+    stroke-width="2"
+  />
+  <rect
+    x="40"
+    y="27"
+    width="40"
+    height="60"
+    rx="9"
+    transform="rotate(-35 60 57)"
+    fill="url(#kb-light-mid)"
+    stroke="#082B56"
+    stroke-opacity="0.08"
+    stroke-width="2"
+  />
+  <g transform="rotate(-35 82 51)">
+    <rect
+      x="63"
+      y="22"
+      width="38"
+      height="58"
+      rx="9"
+      fill="url(#kb-light-front)"
+      stroke="#0F315F"
+      stroke-opacity="0.12"
+      stroke-width="2"
+    />
+    <g clip-path="url(#kb-light-front-clip)">
+      <path d="M72 33H92" stroke="#0B3464" stroke-linecap="round" stroke-opacity="0.62" stroke-width="3"/>
+      <path d="M72 40H89" stroke="#0B3464" stroke-linecap="round" stroke-opacity="0.48" stroke-width="3"/>
+      <path d="M72 47H84" stroke="#0B3464" stroke-linecap="round" stroke-opacity="0.34" stroke-width="3"/>
+      <path d="M72 57H81V65H92" stroke="#0B3464" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="3"/>
+      <circle cx="72" cy="57" r="2.8" fill="#0B3464"/>
+      <circle cx="81" cy="65" r="3.5" fill="#FFB42B"/>
+      <circle cx="92" cy="65" r="2.6" fill="#0B3464"/>
+    </g>
+  </g>
+</svg>
