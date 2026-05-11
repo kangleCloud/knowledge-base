@@ -134,8 +134,8 @@ helm fetch rancher-stable/rancher --version=v2.12.1
 
 <a href="/docs/devops/container/rancher/install-rancher-by-helm.html#_0x03-查找-rancher-需要的镜像" target="_blank">查找 Rancher 需要的镜像</a>，<font color="red">预先将镜像导入到各个节点</font>。
 
-::: el-tabs
---- el-tab-item rancher:v2.12.1
+::: tabs
+=== rancher:v2.12.1
 
 下载镜像文件到服务器
 ```bash
@@ -154,7 +154,7 @@ ctr -n=k8s.io images import /usr/local/src/rancher-image-2.12.1.tar
 crictl images | grep rancher\/rancher
 ```
 ---
---- el-tab-item shell:v0.5.0
+=== shell:v0.5.0
 
 下载镜像文件到服务器
 ```bash
@@ -173,7 +173,7 @@ ctr -n=k8s.io images import /usr/local/src/rancher-shell-image-0.5.0.tar
 crictl images | grep rancher\/shell
 ```
 ---
---- el-tab-item webhook:v0.8.1
+=== webhook:v0.8.1
 
 下载镜像文件到服务器
 ```bash
@@ -193,7 +193,7 @@ ctr -n=k8s.io images import /usr/local/src/rancher-webhook-image-0.8.1.tar
 crictl images | grep rancher\/rancher-webhook
 ```
 ---
---- el-tab-item system-upgrade-controller:v0.16.0
+=== system-upgrade-controller:v0.16.0
 
 下载镜像文件到服务器
 ```bash
@@ -218,27 +218,27 @@ crictl images | grep rancher\/system-upgrade-controller
 ------------------------------ >>>>>> 此处为分割线 <<<<<< ------------------------------
 
 :::tip 生成Rancher镜像文件
-::: el-tabs
---- el-tab-item rancher:v2.12.1
+::: tabs
+=== rancher:v2.12.1
 ```bash
 docker pull rancher/rancher:v2.12.1
 docker save -o /usr/local/src/rancher-image-2.12.1.tar rancher/rancher:v2.12.1
 ```
 ---
---- el-tab-item shell:v0.5.0
+=== shell:v0.5.0
 ```bash
 docker pull rancher/shell:v0.5.0
 docker save -o /usr/local/src/rancher-shell-image-0.5.0.tar rancher/shell:v0.5.0
 ```
 ---
---- el-tab-item webhook:v0.8.1
+=== webhook:v0.8.1
 ```bash
 docker pull rancher/rancher-webhook:v0.8.1
 docker save -o /usr/local/src/rancher-webhook-image-0.8.1.tar \
   rancher/rancher-webhook:v0.8.1
 ```
 ---
---- el-tab-item system-upgrade-controller:v0.16.0
+=== system-upgrade-controller:v0.16.0
 ```bash
 docker pull rancher/system-upgrade-controller:v0.16.0
 docker save -o /usr/local/src/rancher-system-upgrade-controller-image-0.16.0.tar \
@@ -314,15 +314,15 @@ helm uninstall cert-manager --namespace cert-manager
 
 ### 0x02.卸载 Rancher
 
-::: el-tabs
---- el-tab-item 方案一
+::: tabs
+=== 方案一
 [`helm uninstall <RELEASE_NAME> -namespace <NAMESPACE>`](https://helm.sh/zh/docs/helm/helm_uninstall/)
 ```bash
 helm uninstall rancher --namespace cattle-system
 ```
 如果 helm uninstall 卡住了，可以尝试 `helm uninstall rancher --namespace cattle-system --no-hooks` 跳过钩子，有时钩子脚本会出问题。
 ---
---- el-tab-item 方案二
+=== 方案二
 列出现有的 Helm 发布
 ```bash
 helm list --namespace cattle-system

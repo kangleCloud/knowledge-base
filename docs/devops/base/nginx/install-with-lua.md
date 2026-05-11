@@ -81,8 +81,8 @@ cd /usr/local/src/nginx-1.24.0
 - `./configure` 中的 --with-http_***_module 模块默认是不会安装的，[需要显式配置](http://nginx.org/en/docs/configure.html)。
 :::
 
-::: el-tabs
---- el-tab-item 自定义openssl路径
+::: tabs
+=== 自定义openssl路径
 ```bash
 ./configure --prefix=/usr/local/nginx1.24 \
     --with-http_stub_status_module \
@@ -96,7 +96,7 @@ cd /usr/local/src/nginx-1.24.0
 ```
 ---
 
---- el-tab-item 系统默认openssl路径
+=== 系统默认openssl路径
 ```bash
 ./configure --prefix=/usr/local/nginx1.24 \
     --with-http_stub_status_module \
@@ -235,9 +235,9 @@ error while loading shared libraries: libluajit-5.1.so.2: cannot open shared obj
 :::
 
 :::tip ✔️解决方法
-::: el-tabs
+::: tabs
 
---- el-tab-item 方案一：添加动态链接库
+=== 方案一：添加动态链接库
 添加新的动态链接库目录
 ```bash
 echo '/usr/local/luajit2.1/lib' >> /etc/ld.so.conf
@@ -249,7 +249,7 @@ ldconfig -v
 ```
 ---
 
---- el-tab-item 方案二：添加软链
+=== 方案二：添加软链
 ```bash
 ln -s /usr/local/luajit2.0/lib/libluajit-5.1.so.2 /usr/lib64/libluajit-5.1.so.2
 ```

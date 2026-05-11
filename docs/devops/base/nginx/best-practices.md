@@ -237,8 +237,8 @@ location /upload/protected {
 
 应用程序生成文件的访问地址
 
-::: el-tabs
---- el-tab-item Java
+::: tabs
+=== Java
 ```Java
 // 示例
 int expires = (int)(System.currentTimeMillis() / 1000) + 600; // 10分钟后过期
@@ -272,7 +272,7 @@ public static String generate(String uri, int expires, String secret) {
 }
 ```
 ---
---- el-tab-item PHP
+=== PHP
 ```php
 // 示例
 echo generateSecureLink(

@@ -248,13 +248,13 @@ RKE2-Agent安装完成后，Containerd 内部 k8s.io 命名空间下的镜像为
 
 在 systemd 服务的环境文件中添加必要的 HTTP_PROXY、HTTPS_PROXY 和 NO_PROXY 变量。
 
-::: el-tabs
---- el-tab-item RKE2-Server
+::: tabs
+=== RKE2-Server
 ```bash
 vim /etc/default/rke2-server
 ```
 ---
---- el-tab-item RKE2-Agent
+=== RKE2-Agent
 ```bash
 vim /etc/default/rke2-agent
 ```
@@ -290,14 +290,14 @@ go version go1.24.5 X:boringcrypto
 ### 0x02.卸载RKE2
 
 关闭服务
-::: el-tabs
---- el-tab-item RKE2-Agent
+::: tabs
+=== RKE2-Agent
 ```bash
 systemctl disable rke2-agent.service
 systemctl stop rke2-agent.service
 ```
 ---
---- el-tab-item RKE2-Server
+=== RKE2-Server
 ```bash
 systemctl disable rke2-server.service
 systemctl stop rke2-server.service
@@ -306,13 +306,13 @@ systemctl stop rke2-server.service
 :::
 
 执行卸载脚本
-::: el-tabs
---- el-tab-item RKE2-Agent
+::: tabs
+=== RKE2-Agent
 ```bash
 /usr/local/rke2-agent-1.33/bin/rke2-uninstall.sh
 ```
 ---
---- el-tab-item RKE2-Server
+=== RKE2-Server
 ```bash
 /usr/local/rke2-server-1.33/bin/rke2-uninstall.sh
 ```
@@ -320,8 +320,8 @@ systemctl stop rke2-server.service
 :::
 
 删除安装目录
-::: el-tabs
---- el-tab-item RKE2-Agent
+::: tabs
+=== RKE2-Agent
 ```bash
 rm -rf /usr/local/rke2-agent-1.33
 rm -rf /etc/rancher
@@ -330,7 +330,7 @@ rm -rf /run/containerd
 rm -rf /var/run/calico
 ```
 ---
---- el-tab-item RKE2-Server
+=== RKE2-Server
 ```bash
 rm -rf /usr/local/rke2-server-1.33
 rm -rf /etc/rancher

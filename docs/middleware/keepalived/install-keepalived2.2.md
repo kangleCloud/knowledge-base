@@ -11,15 +11,15 @@
 
 ## 1.安装必要的库
 
-::: el-tabs
+::: tabs
 
---- el-tab-item Kylin.v10|openEuler22.03
+=== Kylin.v10|openEuler22.03
 ```bash
 yum install libnl3-devel -y
 ```
 ---
 
---- el-tab-item CentOS7.9
+=== CentOS7.9
 ```bash
 yum install libnl-devel -y
 ```

@@ -58,8 +58,8 @@ sysctl -p
 
 https://www.mongodb.com/zh-cn/docs/v6.0/tutorial/transparent-huge-pages
 
-::: el-tabs
---- el-tab-item OpenEuler22.03
+::: tabs
+=== OpenEuler22.03
 ```bash
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 echo never > /sys/kernel/mm/transparent_hugepage/defrag
@@ -94,9 +94,9 @@ useradd -g mongod mongod -s /sbin/nologin
 
 ### 0x01.下载并解压.tgz安装包
 
-::: el-tabs
+::: tabs
 
---- el-tab-item OpenEuler22.03
+=== OpenEuler22.03
 ```bash
 cd /usr/local/src
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel8-6.0.25.tgz
@@ -105,7 +105,7 @@ mv /usr/local/mongodb-linux-x86_64-rhel80-6.0.25  /usr/local/mongodb6.0
 ```
 ---
 
---- el-tab-item Centos7.9
+=== Centos7.9
 ```bash
 cd /usr/local/src
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-6.0.7.tgz
@@ -251,8 +251,8 @@ yum -y install openssl-libs
 
 ### 0x02.下载并解压安装包
 
-::: el-tabs
---- el-tab-item OpenSSL1.1
+::: tabs
+=== OpenSSL1.1
 ```bash
 cd /usr/local/src
 wget https://downloads.mongodb.com/compass/mongosh-2.5.6-linux-x64-openssl11.tgz

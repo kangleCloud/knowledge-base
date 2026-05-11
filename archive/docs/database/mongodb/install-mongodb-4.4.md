@@ -63,9 +63,9 @@ useradd -g mongod mongod -s /sbin/nologin
 
 ### 0x01.下载并解压.tgz安装包
 
-::: el-tabs
+::: tabs
 
---- el-tab-item OpenEuler22.03
+=== OpenEuler22.03
 ```bash
 cd /usr/local/src
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel80-4.4.22.tgz
@@ -74,7 +74,7 @@ cp -r mongodb-linux-x86_64-rhel80-4.4.22 /usr/local/mongodb4.4
 ```
 ---
 
---- el-tab-item Centos7.9
+=== Centos7.9
 ```bash
 cd /usr/local/src
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.4.22.tgz

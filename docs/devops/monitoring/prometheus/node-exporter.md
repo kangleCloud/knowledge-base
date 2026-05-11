@@ -120,8 +120,8 @@ vim scrape_configs/node-exporters/<server-id>.yml
 ```
 
 配置示例（修改 Prometheus 配置时无需重启服务，仅 prometheus.yml 文件除外）
-::: el-tabs
---- el-tab-item 通用JOB分组版（多个Prometheus服务）
+::: tabs
+=== 通用JOB分组版（多个Prometheus服务）
 [Node Exporter Dashboard 20240520 通用JOB分组版](https://grafana.com/grafana/dashboards/16098-node-exporter-dashboard-20240520-job/)
 ```md
 # Node Exporter
@@ -135,7 +135,7 @@ vim scrape_configs/node-exporters/<server-id>.yml
     iid: '' #主机名/弹性IP（客户提供的堡垒机）
 ```
 ---
---- el-tab-item TenSunS自动同步版（单个Prometheus服务）
+=== TenSunS自动同步版（单个Prometheus服务）
 [Node Exporter Dashboard 20240520 TenSunS自动同步版](https://grafana.com/grafana/dashboards/8919-node-exporter-dashboard-20240520-tensuns/)
 ```md
 # Node Exporter

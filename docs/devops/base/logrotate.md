@@ -19,8 +19,8 @@ yum -y install logrotate
 vim /etc/logrotate.d/nginx
 ```
 
-::: el-tabs
---- el-tab-item 时间
+::: tabs
+=== 时间
 ```bash
 /var/log/nginx/access.log
 /var/log/nginx/error.log {
@@ -39,7 +39,7 @@ vim /etc/logrotate.d/nginx
 }
 ```
 ---
---- el-tab-item 大小
+=== 大小
 ```bash
 /var/log/nginx/access.log
 /var/log/nginx/error.log {
@@ -76,14 +76,14 @@ logrotate 采用主从配置结构以提升可管理性。其中，/etc/logrotat
 
 ### 0x01.触发条件
 
-::: el-tabs
---- el-tab-item 时间周期
+::: tabs
+=== 时间周期
 - `daily` - 每天轮转
 - `weekly` - 每周轮转  
 - `monthly` - 每月轮转
 - `yearly` - 每年轮转
 ---
---- el-tab-item 大小限制
+=== 大小限制
 - `size $SIZE` - 达到指定大小时轮转（如 `size 100k`, `size 10M`, `size 1G`）
 - `maxsize $SIZE` - 在时间周期内达到大小时立即轮转
 - `minsize $SIZE` - 在时间周期内必须达到指定大小才轮转
@@ -95,21 +95,21 @@ size 会覆盖时间周期，只要文件大于指定大小就轮转。而 maxsi
 
 ### 0x02.文件管理
 
-::: el-tabs
---- el-tab-item 保留策略
+::: tabs
+=== 保留策略
 - `rotate $COUNT` - 保留的旧日志文件数量
 - `maxage $COUNT` - 删除超过指定天数的轮转日志
 ---
---- el-tab-item 压缩设置
+=== 压缩设置
 - `compress` - 启用gzip压缩
 - `nocompress` - 不压缩
 - `delaycompress` - 延迟压缩（下次轮转时压缩上一次的）
 ---
---- el-tab-item 文件处理
+=== 文件处理
 - `nocreate` - 不创建新文件
 - `dateext` - 使用日期作为后缀
 ---
---- el-tab-item 文件处理
+=== 文件处理
 - `missingok` - 日志不存在时不报错
 - `nomissingok` - 日志不存在时报错（默认）
 - `ifempty` - 空文件也轮转（默认）

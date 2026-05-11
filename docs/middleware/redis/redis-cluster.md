@@ -124,21 +124,21 @@ systemctl enable redis-6380 --now
 
 查看 redis-6380 服务的运行状态
 
-::: el-tabs
+::: tabs
 
---- el-tab-item systemd
+=== systemd
 ```bash
 systemctl status redis-6380
 ```
 ---
 
---- el-tab-item ps
+=== ps
 ```bash
 ps -ef | grep redis
 ```
 ---
 
---- el-tab-item netstat
+=== netstat
 ```bash
 netstat -lnpt | grep redis
 ```
@@ -236,21 +236,21 @@ systemctl enable redis-6381 --now
 
 查看 redis-6381 服务的运行状态
 
-::: el-tabs
+::: tabs
 
---- el-tab-item systemd
+=== systemd
 ```bash
 systemctl status redis-6381
 ```
 ---
 
---- el-tab-item ps
+=== ps
 ```bash
 ps -ef | grep redis
 ```
 ---
 
---- el-tab-item netstat
+=== netstat
 ```bash
 netstat -lnpt | grep redis
 ```

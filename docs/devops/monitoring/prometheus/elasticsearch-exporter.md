@@ -33,8 +33,8 @@ vim  /etc/systemd/system/prometheus_es_exporter.service
 
 添加如下内容（根据实际情况修改 Elasticsearch 连接参数）
 
-::: el-tabs
-\--- el-tab-item 单节点模式
+::: tabs
+=== 单节点模式
 
 ```md
 [Unit]
@@ -61,7 +61,7 @@ WantedBy=multi-user.target
 
 ***
 
-\--- el-tab-item 集群模式
+=== 集群模式
 
 ```md
 [Unit]

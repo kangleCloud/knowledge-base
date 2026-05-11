@@ -198,15 +198,15 @@ cat /usr/local/canal-admin1.1/conf/application.yml | grep adminPasswd
 ```
 
 使用SQL语句生成加密码加密后的字符串
-::: el-tabs
+::: tabs
 
---- el-tab-item MySQL8.0
+=== MySQL8.0
 ```sql
 SELECT UPPER(SHA1(UNHEX(SHA1('$adminPasswd'))));
 ```
 ---
 
---- el-tab-item MySQL5.6/5.7
+=== MySQL5.6/5.7
 ```sql
 SELECT PASSWORD('$adminPasswd');
 ```

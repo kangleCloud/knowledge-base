@@ -299,9 +299,9 @@ systemctl disable elasticsearch7.17 #关闭开机自启服务
 当使用`systemctl status elasticsearch7.17`命令检查服务状态时，显示 Elasticsearch 服务已经启动，但通过`netstat -nltp | grep 9200`命令却无法检测到9200端口的监听状态。这种情况通常是因为 Elasticsearch 服务仍处于初始化阶段，尚未完全准备好处理请求，或者存在其他启动过程中的延迟。
 :::
 
-::: el-tabs
+::: tabs
 
---- el-tab-item netstat
+=== netstat
 ```bash
 netstat -nltp | grep 9200
 ```
@@ -310,7 +310,7 @@ netstat -nltp | grep 9200
 `tcp6       0      0 :::9200                 :::*                    LISTEN      2095487/java`
 ---
 
---- el-tab-item _cat/health
+=== _cat/health
 ```bash
 curl 127.0.0.1:9200/_cat/health?pretty
 ```

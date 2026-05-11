@@ -35,13 +35,13 @@
 
 创建名为 canal.demodb.biz.routingkey 的 Routing Key。
 
-::: el-tabs
+::: tabs
 
---- el-tab-item Exchange详情创建
+=== Exchange详情创建
 ![](/images/middleware/canal/rabbitmq-exchanges-routingkey.png)
 ---
 
---- el-tab-item Queue详情创建
+=== Queue详情创建
 ![](/images/middleware/canal/rabbitmq-queues-routingkey.png)
 ---
 

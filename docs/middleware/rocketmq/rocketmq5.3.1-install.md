@@ -24,7 +24,7 @@
 - RocketMQ 默认的虚拟机内存较大，启动 Broker 或者 NameServer 可能会因为内存不足而导致失败，需要根据实际情况修改修改Broker和NameServer的虚拟机内存。
 :::
 
-:::tabs
+::: tabs
 
 === runbroker.sh
 

@@ -27,7 +27,7 @@ yum -y install gcc gcc-c++ \
 
 ## 二、安装或升级libzip
 
-:::tabs
+::: tabs
 
 === openEuler22.03/KylinOS.v10
 ```bash
@@ -35,7 +35,7 @@ yum -y install libzip-devel
 ```
 ---
 
-===  Centos7
+=== Centos7
 1. 卸载原有低版本的 libzip-devel 包
 
 ```bash

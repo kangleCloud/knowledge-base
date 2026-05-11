@@ -56,8 +56,8 @@ vim /etc/docker/daemon.json
 ```
 
 添加以下内容
-::: el-tabs
---- el-tab-item 非办公局域网
+::: tabs
+=== 非办公局域网
 ```json
 {
   "registry-mirrors": [
@@ -76,7 +76,7 @@ vim /etc/docker/daemon.json
 }
 ```
 ---
---- el-tab-item 办公局域网
+=== 办公局域网
 ```json
 {
   "registry-mirrors": [

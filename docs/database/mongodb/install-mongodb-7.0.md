@@ -77,8 +77,8 @@ useradd -g mongod mongod -s /sbin/nologin
 
 ### 0x01.下载并解压.tgz安装包
 
-::: el-tabs
---- el-tab-item OpenEuler22.03
+::: tabs
+=== OpenEuler22.03
 ```bash
 cd /usr/local/src
 wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel8-7.0.23.tgz
@@ -221,8 +221,8 @@ yum -y install openssl-libs
 
 ### 0x02.下载并解压安装包
 
-::: el-tabs
---- el-tab-item OpenSSL1.1
+::: tabs
+=== OpenSSL1.1
 ```bash
 cd /usr/local/src
 wget https://downloads.mongodb.com/compass/mongosh-2.5.6-linux-x64-openssl11.tgz
@@ -322,8 +322,8 @@ vim  /etc/systemd/system/disable-transparent-huge-pages.service
 ```
 
 添加如下内容
-::: el-tabs
---- el-tab-item OpenEuler22.03
+::: tabs
+=== OpenEuler22.03
 ```vim
 [Unit]
 Description=Disable Transparent Hugepages (THP)

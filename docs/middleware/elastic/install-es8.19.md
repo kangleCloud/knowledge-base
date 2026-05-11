@@ -205,8 +205,8 @@ systemctl status elasticsearch
 
 ### 0x04. 验证服务是否可用
 
-::: el-tabs
---- el-tab-item netstat
+::: tabs
+=== netstat
 ```bash
 netstat -nltp | grep 9200
 ```
@@ -215,7 +215,7 @@ netstat -nltp | grep 9200
 `tcp6       0      0 :::9200                 :::*                    LISTEN      663545/java`
 ---
 
---- el-tab-item _cat/health
+=== _cat/health
 ```bash
 curl 127.0.0.1:9200/_cat/health?pretty
 ```
@@ -338,11 +338,11 @@ Version: 8.19.9, Build: tar/f60dd5fdef48c4b6cf97721154cd49b3b4794fb0/2025-12-16T
 
 ### 0x01.修改密码
 
-::: el-tabs
---- el-tab-item Kibana控制台
+::: tabs
+=== Kibana控制台
 Management > Stack Management > 安全 > 用户
 ---
---- el-tab-item CURL请求方式
+=== CURL请求方式
 
 修改 elastic 用户的密码
 ```bash

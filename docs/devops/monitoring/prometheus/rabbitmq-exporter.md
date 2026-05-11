@@ -45,8 +45,8 @@ vim scrape_configs/rabbitmq-exporters/<server-id>.yml
 ```
 
 配置示例（后续修改该配置无需重启 Prometheus Server）
-::: el-tabs
---- el-tab-item 单节点模式
+::: tabs
+=== 单节点模式
 ```md
 # RabbitMQ Exporter
 - targets:
@@ -56,7 +56,7 @@ vim scrape_configs/rabbitmq-exporters/<server-id>.yml
     namespace: 'project-rabbitmq-1-42' #服务器标识
 ```
 ---
---- el-tab-item 集群模式
+=== 集群模式
 📝待完善
 ---
 :::
