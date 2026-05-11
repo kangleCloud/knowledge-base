@@ -61,7 +61,7 @@ vim scrape_configs/rabbitmq-exporters/<server-id>.yml
 ---
 :::
 
-------------------------------------------- >>>>>> 此处为分割线 <<<<<< -------------------------------------------
+<KbDivider />
 
 检查配置文件是否正确
 
@@ -94,4 +94,3 @@ systemctl restart prometheus
 ## 附录1.参考资料
 
 - <https://www.rabbitmq.com/docs/prometheus#overview-prometheus>
-

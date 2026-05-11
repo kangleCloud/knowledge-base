@@ -107,7 +107,7 @@ vrrp_instance VI_1 {
 - router_id - 节点唯一标识，通常为 hostname，<font color="red">主备节点不可以相同</font>。
 :::
 
------- >>>>>> 此处为分割线 <<<<<< ------
+<KbDivider />
 
 :::tip vrrp_script chk_nginx 块说明
 - script - 指定shell脚本位置
@@ -116,7 +116,7 @@ vrrp_instance VI_1 {
 - rise - 健康检查后，把服务器从失败标记为成功的次数
 :::
 
------- >>>>>> 此处为分割线 <<<<<< ------
+<KbDivider />
 
 :::tip vrrp_instance VI_1 块说明
 - state - 角色状态，主节点配置为MASTER，备节点为BACKUP。

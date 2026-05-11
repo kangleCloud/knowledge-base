@@ -716,3 +716,170 @@
   height: 1em;
   width: auto;
 }
+
+/**
+ * Dark Markdown Reading
+ * -------------------------------------------------------------------------- */
+
+.dark .vp-doc {
+  --vp-c-text-2: rgba(235, 245, 255, 0.72);
+  --vp-c-text-3: rgba(203, 213, 225, 0.56);
+  --vp-c-divider: rgba(148, 163, 184, 0.16);
+  --vp-c-gutter: rgba(15, 23, 42, 0.92);
+  --vp-c-default-soft: rgba(148, 163, 184, 0.14);
+
+  --vp-code-color: #b9d5ff;
+  --vp-code-link-color: #b9d5ff;
+  --vp-code-link-hover-color: #d8e7ff;
+  --vp-code-bg: rgba(96, 165, 250, 0.16);
+
+  --vp-code-block-color: rgba(235, 243, 255, 0.82);
+  --vp-code-block-bg: #141a24;
+  --vp-code-block-divider-color: rgba(148, 163, 184, 0.18);
+  --vp-code-lang-color: rgba(203, 213, 225, 0.62);
+  --vp-code-line-highlight-color: rgba(99, 102, 241, 0.14);
+  --vp-code-line-number-color: rgba(148, 163, 184, 0.58);
+  --vp-code-copy-code-border-color: rgba(148, 163, 184, 0.22);
+  --vp-code-copy-code-bg: rgba(30, 41, 59, 0.78);
+  --vp-code-copy-code-hover-border-color: rgba(129, 140, 248, 0.28);
+  --vp-code-copy-code-hover-bg: rgba(51, 65, 85, 0.92);
+  --vp-code-copy-code-active-text: rgba(248, 250, 252, 0.92);
+  --vp-code-tab-divider: rgba(148, 163, 184, 0.16);
+  --vp-code-tab-text-color: rgba(226, 232, 240, 0.72);
+  --vp-code-tab-bg: #161d29;
+  --vp-code-tab-hover-text-color: rgba(248, 250, 252, 0.92);
+  --vp-code-tab-active-text-color: rgba(248, 250, 252, 0.96);
+
+  --vp-plugin-tabs-tab-bg: #161d29;
+  --vp-plugin-tabs-tab-divider: rgba(148, 163, 184, 0.16);
+  --vp-plugin-tabs-tab-text-color: rgba(226, 232, 240, 0.72);
+  --vp-plugin-tabs-tab-hover-text-color: rgba(248, 250, 252, 0.92);
+  --vp-plugin-tabs-tab-active-text-color: rgba(248, 250, 252, 0.96);
+
+  --vp-custom-block-info-border: rgba(148, 163, 184, 0.16);
+  --vp-custom-block-info-bg: rgba(51, 65, 85, 0.32);
+  --vp-custom-block-info-code-bg: rgba(71, 85, 105, 0.28);
+  --vp-custom-block-tip-border: rgba(92, 115, 231, 0.22);
+  --vp-custom-block-tip-bg: rgba(62, 99, 221, 0.22);
+  --vp-custom-block-tip-code-bg: rgba(92, 115, 231, 0.22);
+  --vp-custom-block-warning-border: rgba(249, 180, 78, 0.18);
+  --vp-custom-block-warning-bg: rgba(159, 106, 0, 0.18);
+  --vp-custom-block-warning-code-bg: rgba(159, 106, 0, 0.18);
+  --vp-custom-block-danger-border: rgba(241, 65, 88, 0.18);
+  --vp-custom-block-danger-bg: rgba(182, 42, 60, 0.18);
+  --vp-custom-block-danger-code-bg: rgba(182, 42, 60, 0.18);
+  --vp-custom-block-details-border: rgba(148, 163, 184, 0.16);
+  --vp-custom-block-details-bg: rgba(51, 65, 85, 0.28);
+  --vp-custom-block-details-code-bg: rgba(71, 85, 105, 0.26);
+}
+
+.dark .vp-doc :not(pre) > code {
+  box-shadow: inset 0 0 0 1px rgba(129, 140, 248, 0.16);
+}
+
+.dark .vp-doc div[class*='language-'],
+.dark .vp-doc .vp-block,
+.dark .vp-doc .plugin-tabs {
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.12);
+}
+
+.dark .vp-doc blockquote {
+  border-left-color: rgba(129, 140, 248, 0.38);
+  background: rgba(30, 41, 59, 0.34);
+  border-radius: 0 12px 12px 0;
+  padding: 12px 16px;
+}
+
+.dark .vp-doc blockquote > p {
+  color: rgba(226, 232, 240, 0.74);
+}
+
+.dark .vp-doc table {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 12px;
+}
+
+.dark .vp-doc tr {
+  background-color: rgba(22, 28, 38, 0.72);
+}
+
+.dark .vp-doc tr:nth-child(2n) {
+  background-color: rgba(30, 41, 59, 0.58);
+}
+
+.dark .vp-doc th {
+  background-color: rgba(51, 65, 85, 0.6);
+  color: rgba(248, 250, 252, 0.88);
+}
+
+.dark .vp-doc th,
+.dark .vp-doc td {
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+.dark .vp-doc .custom-block {
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.08);
+}
+
+/**
+ * Markdown Divider
+ * -------------------------------------------------------------------------- */
+
+.vp-doc .kb-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 32px 0;
+  color: var(--vp-c-text-3);
+}
+
+.vp-doc .kb-divider__line {
+  flex: 1 1 0;
+  min-width: 36px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0),
+    rgba(148, 163, 184, 0.34) 18%,
+    rgba(148, 163, 184, 0.42) 50%,
+    rgba(148, 163, 184, 0.34) 82%,
+    rgba(148, 163, 184, 0)
+  );
+}
+
+.vp-doc .kb-divider__label {
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  border: 1px solid rgba(129, 140, 248, 0.14);
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.06);
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.dark .vp-doc .kb-divider {
+  color: rgba(203, 213, 225, 0.56);
+}
+
+.dark .vp-doc .kb-divider__line {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0),
+    rgba(96, 165, 250, 0.24) 18%,
+    rgba(129, 140, 248, 0.34) 50%,
+    rgba(96, 165, 250, 0.24) 82%,
+    rgba(148, 163, 184, 0)
+  );
+}
+
+.dark .vp-doc .kb-divider__label {
+  border-color: rgba(129, 140, 248, 0.18);
+  background: rgba(30, 41, 59, 0.76);
+  color: rgba(226, 232, 240, 0.76);
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.06);
+}

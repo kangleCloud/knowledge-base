@@ -261,7 +261,7 @@ yum -y install ncurses-compat-libs
 ```
 :::
 
------- >>>>>> 此处为分割线 <<<<<< ------
+<KbDivider />
 
 ## 附录一、在Centos7上安装Erlang
 

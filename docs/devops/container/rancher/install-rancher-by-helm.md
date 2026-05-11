@@ -215,7 +215,7 @@ crictl images | grep rancher\/system-upgrade-controller
 ---
 :::
 
------------------------------- >>>>>> 此处为分割线 <<<<<< ------------------------------
+<KbDivider />
 
 :::tip 生成Rancher镜像文件
 ::: tabs
@@ -335,7 +335,7 @@ kubectl delete namespace cattle-system
 ---
 :::
 
------------------------------- >>>>>> 此处为分割线 <<<<<< ------------------------------
+<KbDivider />
 
 删除无效的 Pod
 ```bash
