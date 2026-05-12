@@ -12,7 +12,7 @@ https://luajit.org/download.html 下载的包集成到 Nginx 中，执行`nginx`
 
 https://github.com/openresty/luajit2
 
-截止2025年8月21日，luajit2 的最新稳定版为 v2.1-20250529。
+本文示例统一使用 luajit2 v2.1-20250529。
 
 ### 0x01.下载并解压缩
 
@@ -54,7 +54,7 @@ ldconfig -v
 
 https://github.com/vision5/ngx_devel_kit/releases
 
-截止2025年8月21日，ngx_devel_kit 的最新稳定版为 v0.3.4。
+本文示例统一使用 ngx_devel_kit v0.3.4。
 
 ### 0x01.下载并解压缩
 
@@ -69,7 +69,7 @@ tar -zxvf ngx_devel_kit-0.3.4.tar.gz
 
 https://github.com/openresty/lua-nginx-module/tags
 
-截止2025年8月21日，lua-nginx-module 的最新稳定版为 v0.10.28。
+本文示例统一使用 lua-nginx-module v0.10.28。
 
 :::warning
 lua-nginx-module 0.10.14 之后的版本不在支持 `lua_load_resty_core off`（Nginx 配置文件的 http 块中），需要安装 `lua-resty-core` 和 `lua-resty-lrucache`。
@@ -88,7 +88,7 @@ tar -zxvf lua-nginx-module-0.10.28.tar.gz
 
 https://github.com/openresty/lua-resty-core/tags
 
-截止2025年8月21日，lua-resty-core 的最新稳定版为 v0.1.31。
+本文示例统一使用 lua-resty-core v0.1.31。
 
 ### 0x01.下载并解压缩
 
@@ -114,7 +114,7 @@ make && make install PREFIX=/usr/local/lua-resty-core-0.1
 
 https://github.com/openresty/lua-resty-lrucache
 
-截止2025年8月21日，lua-resty-lrucache 的最新稳定版为 v0.15。
+本文示例统一使用 lua-resty-lrucache v0.15。
 
 ### 0x01.下载并解压缩
 
@@ -146,11 +146,11 @@ nginx -V
 
 :::tip 输出如下内容
 ```vim
-nginx version: nginx/1.24.0
+nginx version: nginx/1.28.3
 built by gcc 10.3.1 (GCC) 
 built with OpenSSL 1.1.1w  11 Sep 2023
 TLS SNI support enabled
-configure arguments: --prefix=/usr/local/nginx1.24 --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module --with-http_sub_module --with-http_ssl_module --with-openssl=/usr/local/src/openssl-1.1.1w
+configure arguments: --prefix=/usr/local/nginx1.28 --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module --with-http_sub_module --with-http_ssl_module --with-openssl=/usr/local/src/openssl-1.1.1w
 ```
 :::
 
@@ -160,14 +160,14 @@ configure arguments: --prefix=/usr/local/nginx1.24 --with-http_stub_status_modul
 
 ```bash
 cd /usr/local/src
-wget http://nginx.org/download/nginx-1.24.0.tar.gz
-tar -zxvf nginx-1.24.0.tar.gz
+wget http://nginx.org/download/nginx-1.28.3.tar.gz
+tar -zxvf nginx-1.28.3.tar.gz
 ```
 
 ### 0x03.重新编译Nginx
 
 ```bash
-cd nginx-1.24.0
+cd nginx-1.28.3
 ```
 
 ```bash
@@ -178,7 +178,7 @@ cd nginx-1.24.0
 
 :::tip 示例
 ```bash
-./configure --prefix=/usr/local/nginx1.24 --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module --with-http_sub_module --with-http_ssl_module --with-openssl=/usr/local/src/openssl-1.1.1w --add-module=/usr/local/src/ngx_devel_kit-0.3.4 --add-module=/usr/local/src/lua-nginx-module-0.10.28
+./configure --prefix=/usr/local/nginx1.28 --with-http_stub_status_module --with-http_gzip_static_module --with-http_realip_module --with-http_sub_module --with-http_ssl_module --with-openssl=/usr/local/src/openssl-1.1.1w --add-module=/usr/local/src/ngx_devel_kit-0.3.4 --add-module=/usr/local/src/lua-nginx-module-0.10.28
 ```
 :::
 
@@ -194,8 +194,8 @@ make
 ### 0x04.替换Nginx执行文件
 
 ```bash
-cp /usr/local/nginx1.24/sbin/nginx /usr/local/nginx1.24/sbin/nginx.bak
-cp -rf /usr/local/src/nginx-1.24.0/objs/nginx /usr/local/nginx1.24/sbin/
+cp /usr/local/nginx1.28/sbin/nginx /usr/local/nginx1.28/sbin/nginx.bak
+cp -rf /usr/local/src/nginx-1.28.3/objs/nginx /usr/local/nginx1.28/sbin/
 ```
 
 ### 0x05.修改nginx.conf

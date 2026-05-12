@@ -24,7 +24,7 @@ location ~ \.php {
 
 ```bash
 # 编辑文件
-vim /usr/local/nginx1.24/conf/fastcgi_params
+vim /usr/local/nginx1.28/conf/fastcgi_params
 ```
 
 ```vim
@@ -34,7 +34,7 @@ fastcgi_param  CI_ENV   testing;
 ```
 
 
-> /usr/local/nginx1.24/conf/nginx.conf 中提供的示例 :  
+> /usr/local/nginx1.28/conf/nginx.conf 中提供的示例 :  
 > ```vim
 > # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 > #
@@ -93,14 +93,14 @@ server {
         root           /path/to/webroot/project-name/web;
         fastcgi_pass   127.0.0.1:9073;
         fastcgi_index  index.php;
-        include        /usr/local/nginx1.24/conf/fastcgi.conf;
+        include        /usr/local/nginx1.28/conf/fastcgi.conf;
     }
 }
 ```
 
 验证配置
 ```bash
-/usr/local/nginx1.24/sbin/nginx -t
+/usr/local/nginx1.28/sbin/nginx -t
 
 # 输出如下内容
 nginx: the configuration file ... syntax is ok
@@ -135,7 +135,7 @@ server {
         root           /path/to/website/project-name;
         fastcgi_pass   127.0.0.1:9073;
         fastcgi_index  index.php;
-        include        /usr/local/nginx1.24/conf/fastcgi.conf;
+        include        /usr/local/nginx1.28/conf/fastcgi.conf;
     }
 }
 ```
@@ -165,7 +165,7 @@ server {
     
     location ~ \.php$ {
         root           /path/to/website/project-name/public;
-        include        /usr/local/nginx1.24/conf/fastcgi.conf;
+        include        /usr/local/nginx1.28/conf/fastcgi.conf;
         fastcgi_pass   127.0.0.1:9073;
         fastcgi_index  index.php;
     }
@@ -202,10 +202,9 @@ server {
         root           /path/to/website/project-name/public;
         fastcgi_pass   127.0.0.1:9071;
         fastcgi_index  index.php;
-        include        /usr/local/nginx1.24/conf/fastcgi.conf;
+        include        /usr/local/nginx1.28/conf/fastcgi.conf;
     }
 }
 ```
 
 验证配置同上，此处省略。。。
-

@@ -2,7 +2,7 @@
 
 最新稳定版：https://nginx.org/en/download.html
 
-截止2024年11日，Nginx 1.24.*（*表示最新的补丁版本） 系列最新稳定版为 1.24.0
+本文示例统一以 Nginx 1.28.3 为安装基线版本。
 
 :::warning
 团队正在逐步废弃通过检查文件是否存在对应 Lock 文件的授权校验方案，转而采用在访问路径中添加“private”标识的方式进行授权访问。因此，<font color="red">Nginx 的 Lua 扩展仅需部署在最外层代理服务器上即可实现授权校验</font>，从而简化了整体部署流程。此外，<font color="red">接口缓存功能也可以在这一层实现</font>，无需对业务代码进行大幅改动，即可有效提升系统的并发处理能力。
@@ -10,7 +10,7 @@
 
 :::tip
 - 源码包统一放置于 /usr/local/src 目录
-- 软件安装到 /usr/local 中，并以软件名及主次版本号命名，如 nginx1.24
+- 软件安装到 /usr/local 中，并以软件名及主次版本号命名，如 nginx1.28
 :::
 
 ## 一、安装必要的库
@@ -67,14 +67,14 @@ useradd -g nginx nginx -s /sbin/nologin
 
 ```bash
 cd /usr/local/src
-wget http://nginx.org/download/nginx-1.24.0.tar.gz
-tar -zxvf nginx-1.24.0.tar.gz
+wget http://nginx.org/download/nginx-1.28.3.tar.gz
+tar -zxvf nginx-1.28.3.tar.gz
 ```
 
 ### 0x03.编译并安装
 
 ```bash
-cd /usr/local/src/nginx-1.24.0
+cd /usr/local/src/nginx-1.28.3
 ```
 
 :::warning
@@ -84,7 +84,7 @@ cd /usr/local/src/nginx-1.24.0
 ::: tabs
 === 自定义openssl路径
 ```bash
-./configure --prefix=/usr/local/nginx1.24 \
+./configure --prefix=/usr/local/nginx1.28 \
     --with-http_stub_status_module \
     --with-http_gzip_static_module \
     --with-http_realip_module \
@@ -98,7 +98,7 @@ cd /usr/local/src/nginx-1.24.0
 
 === 系统默认openssl路径
 ```bash
-./configure --prefix=/usr/local/nginx1.24 \
+./configure --prefix=/usr/local/nginx1.28 \
     --with-http_stub_status_module \
     --with-http_gzip_static_module \
     --with-http_realip_module \
@@ -117,7 +117,7 @@ make && make install
 ### 0x05.添加环境变量
 
 ```bash
-echo 'PATH=$PATH:/usr/local/nginx1.24/sbin
+echo 'PATH=$PATH:/usr/local/nginx1.28/sbin
 export PATH' >> /etc/profile
 ```
 
@@ -130,22 +130,22 @@ source /etc/profile
 
 创建日志目录（日志目录所属用户需同启动 nginx 服务的用户一致）
 ```bash
-mkdir -pv /var/log/nginx1.24
+mkdir -pv /var/log/nginx1.28
 ```
 
 备份
 ```bash
-\cp /usr/local/nginx1.24/conf/nginx.conf /usr/local/nginx1.24/conf/nginx.conf.bak
+\cp /usr/local/nginx1.28/conf/nginx.conf /usr/local/nginx1.28/conf/nginx.conf.bak
 ```
 
 清空
 ```bash
-echo > /usr/local/nginx1.24/conf/nginx.conf
+echo > /usr/local/nginx1.28/conf/nginx.conf
 ```
 
 编辑
 ```bash
-vim /usr/local/nginx1.24/conf/nginx.conf
+vim /usr/local/nginx1.28/conf/nginx.conf
 ```
 
 配置文件内容请参照<a href="/docs/devops/base/nginx/configuration.html" target="_blank">Nginx基础配置</a>
@@ -165,7 +165,7 @@ lua_package_path "/usr/local/lua-resty-core-0.1/lib/lua/?.lua;/usr/local/lua-res
 ### 0x01.创建service文件
 
 :::tip
-- 为了便于后期维护，约定在 nginx.service 中明确加载的配置文件路径（如：-c /usr/local/nginx1.24/conf/nginx.conf）。
+- 为了便于后期维护，约定在 nginx.service 中明确加载的配置文件路径（如：-c /usr/local/nginx1.28/conf/nginx.conf）。
 - 配置文件中不支持在每行命令的后面添加注释
 :::
 
@@ -181,9 +181,9 @@ After=network.target
 
 [Service]
 Type=forking
-ExecStart=/usr/local/nginx1.24/sbin/nginx -c /usr/local/nginx1.24/conf/nginx.conf
-ExecReload=/usr/local/nginx1.24/sbin/nginx -s reload
-ExecStop=/usr/local/nginx1.24/sbin/nginx -s quit
+ExecStart=/usr/local/nginx1.28/sbin/nginx -c /usr/local/nginx1.28/conf/nginx.conf
+ExecReload=/usr/local/nginx1.28/sbin/nginx -s reload
+ExecStop=/usr/local/nginx1.28/sbin/nginx -s quit
 PrivateTmp=true
 
 [Install]
@@ -228,7 +228,7 @@ nginx -V
 
 ## 五、常见错误
 
-- **1. 执行 `/usr/local/nginx1.24/sbin/nginx`，提示 libluajit-5.1.so.2 没有找到**
+- **1. 执行 `/usr/local/nginx1.28/sbin/nginx`，提示 libluajit-5.1.so.2 没有找到**
 
 :::danger 错误信息
 error while loading shared libraries: libluajit-5.1.so.2: cannot open shared object file: No such file or directory
@@ -294,7 +294,7 @@ ln -s /usr/local/luajit2.0/lib/libluajit-5.1.so.2 /usr/lib64/libluajit-5.1.so.2
 /usr/bin/ld: /usr/local/src/lua-nginx-module-0.10.24/src/ngx_http_lua_pcrefix.c:100: undefined reference to `pcre_free'
 collect2: 错误：ld 返回 1
 make[1]: *** [objs/Makefile:321：objs/nginx] 错误 1
-make[1]: 离开目录“/usr/local/src/nginx-1.24.0”
+make[1]: 离开目录“/usr/local/src/nginx-1.28.3”
 make: *** [Makefile:10：build] 错误 2
 ```
 :::

@@ -49,8 +49,7 @@ useradd -g nginx nginx -s /sbin/nologin
 ```bash
 cd /usr/local/src
 wget http://nginx.org/download/nginx-1.28.3.tar.gz
-tar -zxvf nginx-1.28.3
-.tar.gz
+tar -zxvf nginx-1.28.3.tar.gz
 ```
 
 ### 0x03.编译并安装

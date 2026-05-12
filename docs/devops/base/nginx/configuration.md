@@ -11,8 +11,8 @@ Nginx 配置文件主要分成全局块，events块，http块，server块，upst
 > 需确定日志文件以及 PID 文件存放的目录已创建。
 >
 > ```
-> mkdir -p /data/logs/nginx1.24
-> mkdir -p /data/run/nginx1.24
+> mkdir -p /data/logs/nginx1.28
+> mkdir -p /data/run/nginx1.28
 > ```
 
 ------
@@ -29,9 +29,9 @@ worker_cpu_affinity auto;
 # 一个 Nginx 进程打开的最多文件描述符数目
 worker_rlimit_nofile 65535;
 # 在 Main 区块中全局配置（默认为 Nginx 安装目录）
-error_log /data/logs/nginx1.24/error.log error;
+error_log /data/logs/nginx1.28/error.log error;
 # 设置 pid 文件的存放路径（默认为 Nginx 安装目录），防止 Nginx 服务被启动多次
-pid /data/run/nginx1.24/nginx.pid;
+pid /data/run/nginx1.28/nginx.pid;
 ```
 
 > [!TIP]
@@ -70,9 +70,9 @@ events {
 ```vim
 http {
     # 文件扩展名与文件类型映射表
-    include /usr/local/nginx1.24/conf/mime.types;
+    include /usr/local/nginx1.28/conf/mime.types;
     # 基于 ngx_http_proxy_module 模块实现的代理功能（需创建配置文件）
-    include /usr/local/nginx1.24/conf/proxy.conf;
+    include /usr/local/nginx1.28/conf/proxy.conf;
 
     # 默认文件类型
     default_type application/octet-stream;
@@ -138,13 +138,13 @@ http {
         '"http_user_agent":"$http_user_agent",'               #用户终端浏览器等信息
         '"status":"$status"}';                                #http响应代码
 
-    # 需新增 /data/logs/nginx1.24 目录
-    access_log  /data/logs/nginx1.24/access.log main_json;
+    # 需新增 /data/logs/nginx1.28 目录
+    access_log  /data/logs/nginx1.28/access.log main_json;
 
     # server 虚拟主机
-    include /usr/local/nginx1.24/conf/conf.d/*.conf;
-    include /usr/local/nginx1.24/conf/conf.d/*/*.conf;
-    include /usr/local/nginx1.24/conf/conf.d/*/*/*.conf;
+    include /usr/local/nginx1.28/conf/conf.d/*.conf;
+    include /usr/local/nginx1.28/conf/conf.d/*/*.conf;
+    include /usr/local/nginx1.28/conf/conf.d/*/*/*.conf;
 }
 ```
 
@@ -153,7 +153,7 @@ http {
 nginx 作为代理转发时使用，其中 set_header 部分会在 location 块中重新配置。
 
 ```bash
-vim /usr/local/nginx1.24/conf/proxy.conf
+vim /usr/local/nginx1.28/conf/proxy.conf
 ```
 
 ```vim
@@ -186,28 +186,28 @@ proxy_next_upstream error timeout invalid_header http_502 http_504; #设置重�
 
 ## 四、server块配置
 
-每个 server 块独立成一个配置文件，并统一存放在 `/usr/local/nginx1.24/conf/conf.d` 中，在 http 块配置中通过 `include` 引入。
+每个 server 块独立成一个配置文件，并统一存放在 `/usr/local/nginx1.28/conf/conf.d` 中，在 http 块配置中通过 `include` 引入。
 
 > [!IMPORTANT]
 >
 > - 非特殊情况，出网域名必须使用 https，禁止 http 访问。
 > - http server 和 https server 的配置使用两个 server 块维护在一个配置文件中。
-> - SSL 证书上传到 nginx 安装目录中的 cert 目录（如：/usr/local/nginx1.24），该目录需要新建。
+> - SSL 证书上传到 nginx 安装目录中的 cert 目录（如：/usr/local/nginx1.28），该目录需要新建。
 
 > [!WARNING]
 >
-> - 为防止源码、中间件、框架自带的监控调试工具等敏感信息泄露，需要在`server`块中引入禁止访问的地址。配置如下：`include /usr/local/nginx1.24/conf/forbidden.conf;`，详见：[Nginx生产配置](prod.md)
+> - 为防止源码、中间件、框架自带的监控调试工具等敏感信息泄露，需要在`server`块中引入禁止访问的地址。配置如下：`include /usr/local/nginx1.28/conf/forbidden.conf;`，详见：[Nginx生产配置](prod.md)
 
 创建文件目录
 
 ```bash
-mkdir -pv /usr/local/nginx1.24/conf/conf.d
+mkdir -pv /usr/local/nginx1.28/conf/conf.d
 ```
 
 ### 1.Http Server
 
 ```bash
-vim /usr/local/nginx1.24/conf/conf.d/sample.conf
+vim /usr/local/nginx1.28/conf/conf.d/sample.conf
 ```
 
 ```vim
@@ -226,7 +226,7 @@ server {
     }
 
     # 禁止访问
-    include /usr/local/nginx1.24/conf/forbidden.conf;
+    include /usr/local/nginx1.28/conf/forbidden.conf;
 
     location / {
         root       /path/to/website;
@@ -251,8 +251,8 @@ server {
     server_name www.example.com; #非特殊情况，禁止使用模糊匹配
 
     # SSL Configuration
-    ssl_certificate     /usr/local/nginx1.24/cert/domain.cer;
-    ssl_certificate_key /usr/local/nginx1.24/cert/domain.key;
+    ssl_certificate     /usr/local/nginx1.28/cert/domain.cer;
+    ssl_certificate_key /usr/local/nginx1.28/cert/domain.key;
     ssl_session_timeout 5m;
     ssl_protocols TLSv1.2;
     ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!3DES:!ADH:!RC4:!DH:!DHE;
@@ -269,7 +269,7 @@ server {
     }
 
     # 禁止访问
-    include /usr/local/nginx1.24/conf/forbidden.conf;
+    include /usr/local/nginx1.28/conf/forbidden.conf;
 
     location / {
         root       /path/to/website;
@@ -285,7 +285,7 @@ server {
 
 ### 1.块示例
 
-配置文件地址：/usr/local/nginx1.24/conf/nginx.conf
+配置文件地址：/usr/local/nginx1.28/conf/nginx.conf
 
 ```vim
 ... #全局块

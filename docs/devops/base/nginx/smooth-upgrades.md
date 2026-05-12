@@ -2,7 +2,7 @@
 
 最新稳定版：https://nginx.org/en/download.html
 
-截止2025年10月20日，Nginx 1.28.*（*表示最新的补丁版本） 系列最新稳定版为 1.28.0
+本文示例统一以 Nginx 1.28.3 作为升级目标版本。
 
 :::tip
 - 源码包统一放置于 /usr/local/src 目录
@@ -17,8 +17,8 @@
 
 ```bash
 cd /usr/local/src
-wget http://nginx.org/download/nginx-1.28.0.tar.gz
-tar -zxvf nginx-1.28.0.tar.gz
+wget http://nginx.org/download/nginx-1.28.3.tar.gz
+tar -zxvf nginx-1.28.3.tar.gz
 ```
 
 ## 2.查看当前Nginx的信息
@@ -40,7 +40,7 @@ configure arguments: --prefix=/usr/local/nginx1.24 --with-http_stub_status_modul
 ## 3.编译并安装
 
 ```bash
-cd /usr/local/src/nginx-1.28.0
+cd /usr/local/src/nginx-1.28.3
 ```
 
 ```bash

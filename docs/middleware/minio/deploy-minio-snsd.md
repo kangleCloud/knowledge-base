@@ -214,7 +214,7 @@ server {
 ```
 
 :::tip
-`include /usr/local/nginx1.24/conf/*;` 的配置可参照 Nginx 跨域以及禁止访问场景相关配置。
+`include /usr/local/nginx1.28/conf/*;` 的配置可参照 Nginx 跨域以及禁止访问场景相关配置。
 :::
 
 :::warning javascript 文件中文乱码问题

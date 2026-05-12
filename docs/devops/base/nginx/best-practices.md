@@ -86,7 +86,7 @@ Rewrite Syntax: http://nginx.org/en/docs/http/ngx_http_rewrite_module.html#rewri
 
 ### 0x01.cors.conf
 
-**在 server 块的配置中引入配置文件**，示例：`include /usr/local/nginx1.24/conf/cors.conf;`
+**在 server 块的配置中引入配置文件**，示例：`include /usr/local/nginx1.28/conf/cors.conf;`
 
 :::tip
 include 指令配置在 location 指令之前
@@ -102,7 +102,7 @@ Access-Control-Allow-Headers 标头字段用于预检请求的响应。其指明
 
 ### 0x02.cors_options.conf
 
-**在 location 块中引入配置文件**，如果 server 块中有多个 location，每个 location 块都需要配置。示例：`include /usr/local/nginx1.24/conf/cors_options.conf;`
+**在 location 块中引入配置文件**，如果 server 块中有多个 location，每个 location 块都需要配置。示例：`include /usr/local/nginx1.28/conf/cors_options.conf;`
 
 :::warning
 server 块中引入 cors_options.conf 会报错
@@ -129,7 +129,7 @@ CORS on Nginx: https://enable-cors.org/server_nginx.html
 
 ### 0x01.forbidden.conf
 
-为了提高后期维护的便利性，将 Nginx 禁止访问的地址统一配置在 `/usr/local/nginx1.24/conf/forbidden.conf` 文件中，并在 `server` 块的配置中通过 `include` 指令引入。
+为了提高后期维护的便利性，将 Nginx 禁止访问的地址统一配置在 `/usr/local/nginx1.28/conf/forbidden.conf` 文件中，并在 `server` 块的配置中通过 `include` 指令引入。
 
 ```vim
 # 访问示例 https://internal-domain.com/.htaccess
