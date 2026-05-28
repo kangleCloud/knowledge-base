@@ -122,6 +122,16 @@ const devopsMenu = [
     ],
   },
   {
+    text: "代理服务",
+    collapsed: false,
+    items: [
+      {
+        text: "Squid 正向代理部署",
+        link: "/docs/devops/base/squid/install.md",
+      },
+    ],
+  },
+  {
     text: "运行时与服务",
     collapsed: true,
     items: [

@@ -219,6 +219,11 @@ auth $PASSWORD
 keys *
 ```
 
+## 相关文档
+
+- [Redis 7.0 三节点哨兵模式部署](/docs/middleware/redis/redis-sentinel-3nodes.md)
+- [Redis 集群部署](/docs/middleware/redis/redis-cluster.md)
+
 ## 五、参考资料
 
 - https://github.com/redis/redis#readme

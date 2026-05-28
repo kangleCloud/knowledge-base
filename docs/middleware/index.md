@@ -6,7 +6,7 @@
 
 ## 推荐入口
 
-- Redis：单节点部署、集群部署、开发规范
+- Redis：[单节点部署](/docs/middleware/redis/install-redis7.0.md)、[三节点哨兵部署](/docs/middleware/redis/redis-sentinel-3nodes.md)、[集群部署](/docs/middleware/redis/redis-cluster.md)、[开发规范](/docs/middleware/redis/developing-guideline.md)
 - RabbitMQ：安装、镜像队列、延迟消息插件
 - Elastic Stack：Elasticsearch、Kibana、IK 插件
 - Nacos：单机与集群配置

@@ -18,6 +18,10 @@ const middlewareMenu = [
         link: "/docs/middleware/redis/install-redis7.0.md",
       },
       {
+        text: "Redis 7.0 三节点哨兵部署",
+        link: "/docs/middleware/redis/redis-sentinel-3nodes.md",
+      },
+      {
         text: "Redis 集群部署",
         link: "/docs/middleware/redis/redis-cluster.md",
       },
