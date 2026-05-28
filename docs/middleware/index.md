@@ -10,7 +10,7 @@
 - RabbitMQ：安装、镜像队列、延迟消息插件
 - Elastic Stack：Elasticsearch、Kibana、IK 插件
 - Nacos：单机与集群配置
-- MinIO：单节点部署与备份
+- MinIO：单节点部署、四节点部署与备份
 - Canal：服务端、管理端和 RabbitMQ 集成
 
 ## 文档约定

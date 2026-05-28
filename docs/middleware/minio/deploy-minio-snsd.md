@@ -1,5 +1,9 @@
 # MinIO单节点单驱动部署
 
+:::tip
+生产环境如需部署 4 节点分布式 MinIO，请参考<a href="/docs/middleware/minio/deploy-minio-mnmd.html" target="_blank">MinIO四节点分布式部署</a>。
+:::
+
 MinIO Download：https://min.io/download#/linux
 
 MinIO Download Page：https://dl.min.io/server/minio/release/linux-amd64/
