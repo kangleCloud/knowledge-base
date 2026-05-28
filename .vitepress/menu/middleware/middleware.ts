@@ -110,6 +110,10 @@ const middlewareMenu = [
         link: "/docs/middleware/minio/deploy-minio-snsd.md",
       },
       {
+        text: "四节点分布式部署",
+        link: "/docs/middleware/minio/deploy-minio-mnmd.md",
+      },
+      {
         text: "基于 mc 的备份方案",
         link: "/docs/middleware/minio/backup-by-mc.md",
       },
