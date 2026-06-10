@@ -46,10 +46,6 @@ const devopsMenu = [
         link: "/docs/devops/base/server-os/alternatives.md",
       },
       {
-        text: "磁盘扩容",
-        link: "/docs/devops/base/server-os/disk-expansion.md",
-      },
-      {
         text: "Linux 常用命令",
         link: "/docs/devops/base/linux-command.md",
       },

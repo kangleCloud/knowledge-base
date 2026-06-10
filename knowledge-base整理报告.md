@@ -11,7 +11,7 @@
 - `docs/backend/`：22 篇 Markdown
 - `docs/database/`：19 篇 Markdown
 - `docs/middleware/`：28 篇 Markdown
-- `docs/devops/`：91 篇 Markdown
+- `docs/devops/`：89 篇 Markdown
 - `docs/troubleshooting/`：5 篇 Markdown
 - `archive/`：27 个归档文件
 - `public/images/`：47 个静态资源文件
@@ -41,6 +41,7 @@
   - [nav.mts](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/.vitepress/nav.mts)
   - [menu/index.mts](/Users/zhuningkang/Documents/git/github/knowledge/knowledge-base/.vitepress/menu/index.mts)
   - `devops/base.ts`、`devops/container.ts`、`devops/cicd.ts`、`devops/monitoring.ts`
+- LVM 动态扩容入口统一保留为 `docs/devops/base/linux/lvm-extend.md`。
 - 为避免归档文件进入站点构建，继续使用 `srcExclude: ["archive/**"]`。
 
 ## 4. 迁移、新增与归并
@@ -98,7 +99,7 @@
 从 `vitepress-ttd/docs/devops` 迁入并整理的内容包括：
 
 - 基础运维：`install-git.md`、`install-go.md`、`linux-command.md`、`logrotate.md`
-- 服务器系统：`alternatives.md`、`cockpit.md`、`disk-expansion.md`、`firewalld.md`、`initialization.md`、`systemd.md`、`systemd-command.md`
+- 服务器系统：`alternatives.md`、`cockpit.md`、`firewalld.md`、`initialization.md`、`systemd.md`、`systemd-command.md`
 - Nginx：`best-practices.md`、`ha-with-keepalived.md`、`install-with-lua.md`、`integration-php-fpm.md`、`location-example.md`、`nginx-lua-module.md`、`recompiling-with-modules.md`、`smooth-upgrades.md`、`upstream.md`
 - Node / Python：`nodejs/install-nodejs.md`、`python/conda.md`、`python/install-python2-on-openeuler.md`、`python/install-python3-on-centos7.md`
 - 容器平台：`rancher/install-rke2.md`、`rancher/install-rancher-by-helm.md`

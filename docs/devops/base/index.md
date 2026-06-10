@@ -15,20 +15,21 @@
 - [Harbor 安装](/docs/devops/base/harbor/install.md)
 - [NFS 安装与维护](/docs/devops/base/nfs/install.md)
 - [LVM 基础操作](/docs/devops/base/linux/lvm.md)
+- [LVM 动态扩容](/docs/devops/base/linux/lvm-extend.md)
 
 ## 子主题清单
 
-- 服务器系统：初始化、防火墙、系统优化、OpenSSL/OpenSSH、磁盘扩容、Systemd、Alternatives
+- 服务器系统：初始化、防火墙、系统优化、OpenSSL/OpenSSH、Systemd、Alternatives
 - Web 服务：Nginx 安装、配置、负载均衡、平滑升级、Lua 模块、PHP-FPM 集成、Squid 正向代理
 - 运行时与工具：JDK、Maven、Node.js、Python、Git、Go、Logrotate
-- 服务治理与存储：Supervisor、Harbor、Ansible、NFS、LVM
+- 服务治理与存储：Supervisor、Harbor、Ansible、NFS、LVM 基础操作、LVM 动态扩容
 
 ## 代表文档入口
 
 - 初始化与基线：`server-os/initialization.md`、`server-os/optimization.md`
 - 服务管理：`server-os/systemd.md`、`supervisor/supervisor-config.md`
 - 站点与代理：[Nginx 基础配置](/docs/devops/base/nginx/configuration.md)、[Nginx 负载均衡](/docs/devops/base/nginx/upstream.md)、[Squid 正向代理部署](/docs/devops/base/squid/install.md)
-- 存储与仓库：`harbor/install.md`、`nfs/install.md`、`linux/lvm-extend.md`
+- 存储与仓库：`harbor/install.md`、`nfs/install.md`、`linux/lvm.md`、`linux/lvm-extend.md`
 
 ## 注意事项
 
